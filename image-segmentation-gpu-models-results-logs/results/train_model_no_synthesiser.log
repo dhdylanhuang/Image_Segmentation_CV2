@@ -1,0 +1,1753 @@
+2026-04-09 17:46:57,889 | INFO | DATA_PATH: /mnt/primary/image-segmentation-training/dataset
+2026-04-09 17:46:57,889 | INFO | RESULTS_ROOT: /mnt/primary/image-segmentation-training/results
+2026-04-09 17:46:57,889 | INFO | LOG_PATH: /mnt/primary/image-segmentation-training/results/train_model_no_synthesiser.log
+2026-04-09 17:46:57,908 | INFO | Dataset structure:
+2026-04-09 17:46:57,908 | INFO |   train/  — 803 sat images, 803 masks
+2026-04-09 17:46:57,908 | INFO |   valid/  — 171 sat images (no masks, inference only)
+2026-04-09 17:46:57,908 | INFO |   test/   — 172 sat images (no masks, inference only)
+2026-04-09 17:47:44,977 | INFO | DATA_PATH: /mnt/primary/image-segmentation-training/dataset
+2026-04-09 17:47:44,977 | INFO | RESULTS_ROOT: /mnt/primary/image-segmentation-training/results
+2026-04-09 17:47:44,977 | INFO | LOG_PATH: /mnt/primary/image-segmentation-training/results/train_model_no_synthesiser.log
+2026-04-09 17:47:44,994 | INFO | Dataset structure:
+2026-04-09 17:47:44,994 | INFO |   train/  — 803 sat images, 803 masks
+2026-04-09 17:47:44,994 | INFO |   valid/  — 171 sat images (no masks, inference only)
+2026-04-09 17:47:44,994 | INFO |   test/   — 172 sat images (no masks, inference only)
+2026-04-09 17:49:34,141 | INFO | DATA_PATH: /mnt/primary/image-segmentation-training/dataset
+2026-04-09 17:49:34,141 | INFO | RESULTS_ROOT: /mnt/primary/image-segmentation-training/results
+2026-04-09 17:49:34,141 | INFO | LOG_PATH: /mnt/primary/image-segmentation-training/results/train_model_no_synthesiser.log
+2026-04-09 17:49:34,160 | INFO | Dataset structure:
+2026-04-09 17:49:34,160 | INFO |   train/  — 803 sat images, 803 masks
+2026-04-09 17:49:34,160 | INFO |   valid/  — 171 sat images (no masks, inference only)
+2026-04-09 17:49:34,160 | INFO |   test/   — 172 sat images (no masks, inference only)
+2026-04-09 17:49:34,165 | INFO | Total labeled samples: 803
+2026-04-09 17:49:34,740 | INFO | 
+=======================================================
+2026-04-09 17:49:34,740 | INFO |   Fold 1 / 5  —  train: 642  val: 161
+2026-04-09 17:49:34,740 | INFO | =======================================================
+2026-04-09 17:49:35,161 | INFO | 
+Epoch 1/25
+2026-04-09 17:54:34,911 | INFO | DATA_PATH: /mnt/primary/image-segmentation-training/dataset
+2026-04-09 17:54:34,911 | INFO | RESULTS_ROOT: /mnt/primary/image-segmentation-training/results
+2026-04-09 17:54:34,911 | INFO | LOG_PATH: /mnt/primary/image-segmentation-training/results/train_model_no_synthesiser.log
+2026-04-09 17:54:34,929 | INFO | Dataset structure:
+2026-04-09 17:54:34,929 | INFO |   train/  — 803 sat images, 803 masks
+2026-04-09 17:54:34,929 | INFO |   valid/  — 171 sat images (no masks, inference only)
+2026-04-09 17:54:34,929 | INFO |   test/   — 172 sat images (no masks, inference only)
+2026-04-09 17:54:34,933 | INFO | Total labeled samples: 803
+2026-04-09 17:54:35,470 | INFO | 
+=======================================================
+2026-04-09 17:54:35,470 | INFO |   Fold 1 / 5  —  train: 642  val: 161
+2026-04-09 17:54:35,470 | INFO | =======================================================
+2026-04-09 17:54:35,896 | INFO | 
+Epoch 1/100
+2026-04-09 18:00:13,920 | INFO | Train Loss: 1.9286 | Val Loss: 1.7987 | Val mIoU: 0.1025 | Val mAcc: 0.1976
+2026-04-09 18:00:14,112 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 18:00:14,112 | INFO | 
+Epoch 2/100
+2026-04-09 18:06:00,243 | INFO | Train Loss: 1.7300 | Val Loss: 1.5157 | Val mIoU: 0.1970 | Val mAcc: 0.2623
+2026-04-09 18:06:00,442 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 18:06:00,442 | INFO | 
+Epoch 3/100
+2026-04-09 18:11:44,165 | INFO | Train Loss: 1.4420 | Val Loss: 1.1173 | Val mIoU: 0.2063 | Val mAcc: 0.2694
+2026-04-09 18:11:44,352 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 18:11:44,353 | INFO | 
+Epoch 4/100
+2026-04-09 18:17:29,932 | INFO | Train Loss: 1.1799 | Val Loss: 0.8962 | Val mIoU: 0.2373 | Val mAcc: 0.3133
+2026-04-09 18:17:30,110 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 18:17:30,110 | INFO | 
+Epoch 5/100
+2026-04-09 18:23:15,105 | INFO | Train Loss: 1.0514 | Val Loss: 0.7636 | Val mIoU: 0.2832 | Val mAcc: 0.3731
+2026-04-09 18:23:15,292 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 18:23:15,292 | INFO | 
+Epoch 6/100
+2026-04-09 18:29:00,543 | INFO | Train Loss: 0.9583 | Val Loss: 0.6889 | Val mIoU: 0.3149 | Val mAcc: 0.3994
+2026-04-09 18:29:00,721 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 18:29:00,721 | INFO | 
+Epoch 7/100
+2026-04-09 18:34:45,944 | INFO | Train Loss: 0.9101 | Val Loss: 0.6201 | Val mIoU: 0.3640 | Val mAcc: 0.4536
+2026-04-09 18:34:46,127 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 18:34:46,127 | INFO | 
+Epoch 8/100
+2026-04-09 18:40:30,213 | INFO | Train Loss: 0.7958 | Val Loss: 0.5653 | Val mIoU: 0.4411 | Val mAcc: 0.5324
+2026-04-09 18:40:30,400 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 18:40:30,400 | INFO | 
+Epoch 9/100
+2026-04-09 18:46:14,633 | INFO | Train Loss: 0.7522 | Val Loss: 0.5332 | Val mIoU: 0.4543 | Val mAcc: 0.5449
+2026-04-09 18:46:14,820 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 18:46:14,820 | INFO | 
+Epoch 10/100
+2026-04-09 18:51:58,793 | INFO | Train Loss: 0.7209 | Val Loss: 0.4981 | Val mIoU: 0.4744 | Val mAcc: 0.5657
+2026-04-09 18:51:58,979 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 18:51:58,979 | INFO | 
+Epoch 11/100
+2026-04-09 18:57:41,026 | INFO | Train Loss: 0.6861 | Val Loss: 0.4822 | Val mIoU: 0.4815 | Val mAcc: 0.5709
+2026-04-09 18:57:41,255 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 18:57:41,255 | INFO | 
+Epoch 12/100
+2026-04-09 19:03:23,750 | INFO | Train Loss: 0.6279 | Val Loss: 0.4689 | Val mIoU: 0.5102 | Val mAcc: 0.6139
+2026-04-09 19:03:23,936 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 19:03:23,936 | INFO | 
+Epoch 13/100
+2026-04-09 19:09:06,435 | INFO | Train Loss: 0.6481 | Val Loss: 0.4493 | Val mIoU: 0.5080 | Val mAcc: 0.5899
+2026-04-09 19:09:06,436 | INFO | No improvement. Patience 1/7
+2026-04-09 19:09:06,436 | INFO | 
+Epoch 14/100
+2026-04-09 19:14:51,515 | INFO | Train Loss: 0.6191 | Val Loss: 0.4384 | Val mIoU: 0.5209 | Val mAcc: 0.6010
+2026-04-09 19:14:51,699 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 19:14:51,699 | INFO | 
+Epoch 15/100
+2026-04-09 19:20:37,062 | INFO | Train Loss: 0.6124 | Val Loss: 0.4332 | Val mIoU: 0.5270 | Val mAcc: 0.6231
+2026-04-09 19:20:37,686 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 19:20:37,686 | INFO | 
+Epoch 16/100
+2026-04-09 19:26:20,677 | INFO | Train Loss: 0.5811 | Val Loss: 0.4279 | Val mIoU: 0.5271 | Val mAcc: 0.6168
+2026-04-09 19:26:20,853 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 19:26:20,853 | INFO | 
+Epoch 17/100
+2026-04-09 19:32:07,668 | INFO | Train Loss: 0.6377 | Val Loss: 0.4284 | Val mIoU: 0.5221 | Val mAcc: 0.6155
+2026-04-09 19:32:07,670 | INFO | No improvement. Patience 1/7
+2026-04-09 19:32:07,670 | INFO | 
+Epoch 18/100
+2026-04-09 19:37:51,586 | INFO | Train Loss: 0.5852 | Val Loss: 0.4195 | Val mIoU: 0.5358 | Val mAcc: 0.6310
+2026-04-09 19:37:51,772 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 19:37:51,772 | INFO | 
+Epoch 19/100
+2026-04-09 19:43:35,262 | INFO | Train Loss: 0.5506 | Val Loss: 0.4093 | Val mIoU: 0.5416 | Val mAcc: 0.6313
+2026-04-09 19:43:35,439 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 19:43:35,439 | INFO | 
+Epoch 20/100
+2026-04-09 19:49:14,010 | INFO | Train Loss: 0.5630 | Val Loss: 0.4085 | Val mIoU: 0.5442 | Val mAcc: 0.6342
+2026-04-09 19:49:14,202 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 19:49:14,202 | INFO | 
+Epoch 21/100
+2026-04-09 19:54:49,264 | INFO | Train Loss: 0.5554 | Val Loss: 0.4084 | Val mIoU: 0.5491 | Val mAcc: 0.6324
+2026-04-09 19:54:49,443 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 19:54:49,443 | INFO | 
+Epoch 22/100
+2026-04-09 20:00:23,750 | INFO | Train Loss: 0.5607 | Val Loss: 0.3964 | Val mIoU: 0.5489 | Val mAcc: 0.6376
+2026-04-09 20:00:23,751 | INFO | No improvement. Patience 1/7
+2026-04-09 20:00:23,751 | INFO | 
+Epoch 23/100
+2026-04-09 20:06:00,528 | INFO | Train Loss: 0.5378 | Val Loss: 0.3977 | Val mIoU: 0.5497 | Val mAcc: 0.6392
+2026-04-09 20:06:00,719 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 20:06:00,719 | INFO | 
+Epoch 24/100
+2026-04-09 20:11:35,000 | INFO | Train Loss: 0.5295 | Val Loss: 0.4020 | Val mIoU: 0.5454 | Val mAcc: 0.6379
+2026-04-09 20:11:35,002 | INFO | No improvement. Patience 1/7
+2026-04-09 20:11:35,002 | INFO | 
+Epoch 25/100
+2026-04-09 20:17:16,247 | INFO | Train Loss: 0.5431 | Val Loss: 0.4196 | Val mIoU: 0.5286 | Val mAcc: 0.6088
+2026-04-09 20:17:16,248 | INFO | No improvement. Patience 2/7
+2026-04-09 20:17:16,248 | INFO | 
+Epoch 26/100
+2026-04-09 20:23:00,555 | INFO | Train Loss: 0.4964 | Val Loss: 0.4007 | Val mIoU: 0.5449 | Val mAcc: 0.6338
+2026-04-09 20:23:00,556 | INFO | No improvement. Patience 3/7
+2026-04-09 20:23:00,556 | INFO | 
+Epoch 27/100
+2026-04-09 20:28:43,074 | INFO | Train Loss: 0.5708 | Val Loss: 0.3903 | Val mIoU: 0.5551 | Val mAcc: 0.6475
+2026-04-09 20:28:43,254 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 20:28:43,254 | INFO | 
+Epoch 28/100
+2026-04-09 20:34:26,071 | INFO | Train Loss: 0.5132 | Val Loss: 0.3893 | Val mIoU: 0.5534 | Val mAcc: 0.6449
+2026-04-09 20:34:26,072 | INFO | No improvement. Patience 1/7
+2026-04-09 20:34:26,072 | INFO | 
+Epoch 29/100
+2026-04-09 20:40:08,503 | INFO | Train Loss: 0.4831 | Val Loss: 0.3852 | Val mIoU: 0.5561 | Val mAcc: 0.6441
+2026-04-09 20:40:08,679 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 20:40:08,679 | INFO | 
+Epoch 30/100
+2026-04-09 20:45:48,073 | INFO | Train Loss: 0.4694 | Val Loss: 0.3883 | Val mIoU: 0.5519 | Val mAcc: 0.6341
+2026-04-09 20:45:48,073 | INFO | No improvement. Patience 1/7
+2026-04-09 20:45:48,074 | INFO | 
+Epoch 31/100
+2026-04-09 20:51:28,989 | INFO | Train Loss: 0.4661 | Val Loss: 0.3819 | Val mIoU: 0.5570 | Val mAcc: 0.6439
+2026-04-09 20:51:29,167 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 20:51:29,167 | INFO | 
+Epoch 32/100
+2026-04-09 20:57:14,757 | INFO | Train Loss: 0.4662 | Val Loss: 0.3825 | Val mIoU: 0.5578 | Val mAcc: 0.6471
+2026-04-09 20:57:14,943 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 20:57:14,943 | INFO | 
+Epoch 33/100
+2026-04-09 21:02:54,196 | INFO | Train Loss: 0.5071 | Val Loss: 0.3775 | Val mIoU: 0.5628 | Val mAcc: 0.6536
+2026-04-09 21:02:54,374 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 21:02:54,374 | INFO | 
+Epoch 34/100
+2026-04-09 21:08:37,967 | INFO | Train Loss: 0.4830 | Val Loss: 0.3817 | Val mIoU: 0.5612 | Val mAcc: 0.6436
+2026-04-09 21:08:37,968 | INFO | No improvement. Patience 1/7
+2026-04-09 21:08:37,968 | INFO | 
+Epoch 35/100
+2026-04-09 21:14:16,580 | INFO | Train Loss: 0.4871 | Val Loss: 0.3848 | Val mIoU: 0.5533 | Val mAcc: 0.6427
+2026-04-09 21:14:16,582 | INFO | No improvement. Patience 2/7
+2026-04-09 21:14:16,582 | INFO | 
+Epoch 36/100
+2026-04-09 21:20:00,039 | INFO | Train Loss: 0.4994 | Val Loss: 0.3760 | Val mIoU: 0.5613 | Val mAcc: 0.6490
+2026-04-09 21:20:00,040 | INFO | No improvement. Patience 3/7
+2026-04-09 21:20:00,040 | INFO | 
+Epoch 37/100
+2026-04-09 21:25:42,652 | INFO | Train Loss: 0.4878 | Val Loss: 0.3787 | Val mIoU: 0.5575 | Val mAcc: 0.6454
+2026-04-09 21:25:42,653 | INFO | No improvement. Patience 4/7
+2026-04-09 21:25:42,653 | INFO | 
+Epoch 38/100
+2026-04-09 21:31:26,255 | INFO | Train Loss: 0.4709 | Val Loss: 0.3846 | Val mIoU: 0.5568 | Val mAcc: 0.6337
+2026-04-09 21:31:26,256 | INFO | No improvement. Patience 5/7
+2026-04-09 21:31:26,256 | INFO | 
+Epoch 39/100
+2026-04-09 21:37:08,410 | INFO | Train Loss: 0.4537 | Val Loss: 0.3655 | Val mIoU: 0.5679 | Val mAcc: 0.6565
+2026-04-09 21:37:08,599 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 21:37:08,599 | INFO | 
+Epoch 40/100
+2026-04-09 21:42:49,046 | INFO | Train Loss: 0.4633 | Val Loss: 0.3691 | Val mIoU: 0.5668 | Val mAcc: 0.6503
+2026-04-09 21:42:49,047 | INFO | No improvement. Patience 1/7
+2026-04-09 21:42:49,047 | INFO | 
+Epoch 41/100
+2026-04-09 21:48:29,259 | INFO | Train Loss: 0.4714 | Val Loss: 0.3724 | Val mIoU: 0.5630 | Val mAcc: 0.6498
+2026-04-09 21:48:29,260 | INFO | No improvement. Patience 2/7
+2026-04-09 21:48:29,260 | INFO | 
+Epoch 42/100
+2026-04-09 21:54:09,035 | INFO | Train Loss: 0.4832 | Val Loss: 0.3745 | Val mIoU: 0.5636 | Val mAcc: 0.6495
+2026-04-09 21:54:09,036 | INFO | No improvement. Patience 3/7
+2026-04-09 21:54:09,036 | INFO | 
+Epoch 43/100
+2026-04-09 21:59:50,575 | INFO | Train Loss: 0.4616 | Val Loss: 0.3735 | Val mIoU: 0.5627 | Val mAcc: 0.6432
+2026-04-09 21:59:50,576 | INFO | No improvement. Patience 4/7
+2026-04-09 21:59:50,576 | INFO | 
+Epoch 44/100
+2026-04-09 22:05:33,411 | INFO | Train Loss: 0.4691 | Val Loss: 0.3688 | Val mIoU: 0.5674 | Val mAcc: 0.6511
+2026-04-09 22:05:33,414 | INFO | No improvement. Patience 5/7
+2026-04-09 22:05:33,415 | INFO | 
+Epoch 45/100
+2026-04-09 22:11:17,278 | INFO | Train Loss: 0.4365 | Val Loss: 0.3675 | Val mIoU: 0.5681 | Val mAcc: 0.6537
+2026-04-09 22:11:17,456 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 22:11:17,457 | INFO | 
+Epoch 46/100
+2026-04-09 22:17:00,424 | INFO | Train Loss: 0.4288 | Val Loss: 0.3718 | Val mIoU: 0.5628 | Val mAcc: 0.6440
+2026-04-09 22:17:00,426 | INFO | No improvement. Patience 1/7
+2026-04-09 22:17:00,426 | INFO | 
+Epoch 47/100
+2026-04-09 22:22:45,985 | INFO | Train Loss: 0.4255 | Val Loss: 0.3620 | Val mIoU: 0.5690 | Val mAcc: 0.6539
+2026-04-09 22:22:46,163 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 22:22:46,163 | INFO | 
+Epoch 48/100
+2026-04-09 22:28:29,769 | INFO | Train Loss: 0.4246 | Val Loss: 0.3626 | Val mIoU: 0.5691 | Val mAcc: 0.6597
+2026-04-09 22:28:29,947 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 22:28:29,947 | INFO | 
+Epoch 49/100
+2026-04-09 22:34:12,043 | INFO | Train Loss: 0.4304 | Val Loss: 0.3654 | Val mIoU: 0.5689 | Val mAcc: 0.6557
+2026-04-09 22:34:12,045 | INFO | No improvement. Patience 1/7
+2026-04-09 22:34:12,045 | INFO | 
+Epoch 50/100
+2026-04-09 22:39:53,456 | INFO | Train Loss: 0.4520 | Val Loss: 0.3690 | Val mIoU: 0.5650 | Val mAcc: 0.6459
+2026-04-09 22:39:53,458 | INFO | No improvement. Patience 2/7
+2026-04-09 22:39:53,458 | INFO | 
+Epoch 51/100
+2026-04-09 22:45:33,586 | INFO | Train Loss: 0.4404 | Val Loss: 0.3694 | Val mIoU: 0.5665 | Val mAcc: 0.6486
+2026-04-09 22:45:33,587 | INFO | No improvement. Patience 3/7
+2026-04-09 22:45:33,587 | INFO | 
+Epoch 52/100
+2026-04-09 22:51:10,099 | INFO | Train Loss: 0.4108 | Val Loss: 0.3683 | Val mIoU: 0.5680 | Val mAcc: 0.6580
+2026-04-09 22:51:10,100 | INFO | No improvement. Patience 4/7
+2026-04-09 22:51:10,100 | INFO | 
+Epoch 53/100
+2026-04-09 22:56:50,602 | INFO | Train Loss: 0.4181 | Val Loss: 0.3634 | Val mIoU: 0.5692 | Val mAcc: 0.6619
+2026-04-09 22:56:50,787 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 22:56:50,787 | INFO | 
+Epoch 54/100
+2026-04-09 23:02:30,741 | INFO | Train Loss: 0.4284 | Val Loss: 0.3619 | Val mIoU: 0.5704 | Val mAcc: 0.6599
+2026-04-09 23:02:30,921 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 23:02:30,921 | INFO | 
+Epoch 55/100
+2026-04-09 23:08:09,692 | INFO | Train Loss: 0.4490 | Val Loss: 0.3674 | Val mIoU: 0.5697 | Val mAcc: 0.6575
+2026-04-09 23:08:09,692 | INFO | No improvement. Patience 1/7
+2026-04-09 23:08:09,692 | INFO | 
+Epoch 56/100
+2026-04-09 23:13:43,373 | INFO | Train Loss: 0.4394 | Val Loss: 0.3614 | Val mIoU: 0.5728 | Val mAcc: 0.6630
+2026-04-09 23:13:43,555 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 23:13:43,555 | INFO | 
+Epoch 57/100
+2026-04-09 23:19:19,593 | INFO | Train Loss: 0.4489 | Val Loss: 0.3590 | Val mIoU: 0.5736 | Val mAcc: 0.6667
+2026-04-09 23:19:19,773 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 23:19:19,773 | INFO | 
+Epoch 58/100
+2026-04-09 23:24:54,785 | INFO | Train Loss: 0.4425 | Val Loss: 0.3582 | Val mIoU: 0.5719 | Val mAcc: 0.6565
+2026-04-09 23:24:54,786 | INFO | No improvement. Patience 1/7
+2026-04-09 23:24:54,786 | INFO | 
+Epoch 59/100
+2026-04-09 23:30:31,427 | INFO | Train Loss: 0.4228 | Val Loss: 0.3644 | Val mIoU: 0.5692 | Val mAcc: 0.6489
+2026-04-09 23:30:31,428 | INFO | No improvement. Patience 2/7
+2026-04-09 23:30:31,428 | INFO | 
+Epoch 60/100
+2026-04-09 23:36:10,102 | INFO | Train Loss: 0.4510 | Val Loss: 0.3572 | Val mIoU: 0.5739 | Val mAcc: 0.6553
+2026-04-09 23:36:10,289 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-09 23:36:10,289 | INFO | 
+Epoch 61/100
+2026-04-09 23:41:50,846 | INFO | Train Loss: 0.4225 | Val Loss: 0.3582 | Val mIoU: 0.5712 | Val mAcc: 0.6555
+2026-04-09 23:41:50,848 | INFO | No improvement. Patience 1/7
+2026-04-09 23:41:50,848 | INFO | 
+Epoch 62/100
+2026-04-09 23:47:35,846 | INFO | Train Loss: 0.4249 | Val Loss: 0.3576 | Val mIoU: 0.5725 | Val mAcc: 0.6571
+2026-04-09 23:47:35,847 | INFO | No improvement. Patience 2/7
+2026-04-09 23:47:35,847 | INFO | 
+Epoch 63/100
+2026-04-09 23:53:23,169 | INFO | Train Loss: 0.4224 | Val Loss: 0.3534 | Val mIoU: 0.5736 | Val mAcc: 0.6607
+2026-04-09 23:53:23,170 | INFO | No improvement. Patience 3/7
+2026-04-09 23:53:23,170 | INFO | 
+Epoch 64/100
+2026-04-09 23:59:02,672 | INFO | Train Loss: 0.4170 | Val Loss: 0.3572 | Val mIoU: 0.5731 | Val mAcc: 0.6630
+2026-04-09 23:59:02,673 | INFO | No improvement. Patience 4/7
+2026-04-09 23:59:02,673 | INFO | 
+Epoch 65/100
+2026-04-10 00:04:40,321 | INFO | Train Loss: 0.4170 | Val Loss: 0.3592 | Val mIoU: 0.5722 | Val mAcc: 0.6538
+2026-04-10 00:04:40,322 | INFO | No improvement. Patience 5/7
+2026-04-10 00:04:40,322 | INFO | 
+Epoch 66/100
+2026-04-10 00:10:17,304 | INFO | Train Loss: 0.3862 | Val Loss: 0.3566 | Val mIoU: 0.5739 | Val mAcc: 0.6571
+2026-04-10 00:10:17,498 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-10 00:10:17,498 | INFO | 
+Epoch 67/100
+2026-04-10 00:15:52,295 | INFO | Train Loss: 0.4626 | Val Loss: 0.3638 | Val mIoU: 0.5725 | Val mAcc: 0.6526
+2026-04-10 00:15:52,296 | INFO | No improvement. Patience 1/7
+2026-04-10 00:15:52,296 | INFO | 
+Epoch 68/100
+2026-04-10 00:21:27,566 | INFO | Train Loss: 0.4496 | Val Loss: 0.3614 | Val mIoU: 0.5723 | Val mAcc: 0.6533
+2026-04-10 00:21:27,568 | INFO | No improvement. Patience 2/7
+2026-04-10 00:21:27,568 | INFO | 
+Epoch 69/100
+2026-04-10 00:27:02,625 | INFO | Train Loss: 0.4402 | Val Loss: 0.3620 | Val mIoU: 0.5727 | Val mAcc: 0.6554
+2026-04-10 00:27:02,626 | INFO | No improvement. Patience 3/7
+2026-04-10 00:27:02,626 | INFO | 
+Epoch 70/100
+2026-04-10 00:32:43,177 | INFO | Train Loss: 0.4245 | Val Loss: 0.3603 | Val mIoU: 0.5747 | Val mAcc: 0.6616
+2026-04-10 00:32:43,354 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-10 00:32:43,354 | INFO | 
+Epoch 71/100
+2026-04-10 00:38:18,752 | INFO | Train Loss: 0.4093 | Val Loss: 0.3558 | Val mIoU: 0.5758 | Val mAcc: 0.6626
+2026-04-10 00:38:18,941 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-10 00:38:18,941 | INFO | 
+Epoch 72/100
+2026-04-10 00:43:54,165 | INFO | Train Loss: 0.4068 | Val Loss: 0.3565 | Val mIoU: 0.5740 | Val mAcc: 0.6566
+2026-04-10 00:43:54,165 | INFO | No improvement. Patience 1/7
+2026-04-10 00:43:54,165 | INFO | 
+Epoch 73/100
+2026-04-10 00:49:28,444 | INFO | Train Loss: 0.3979 | Val Loss: 0.3550 | Val mIoU: 0.5758 | Val mAcc: 0.6623
+2026-04-10 00:49:28,445 | INFO | No improvement. Patience 2/7
+2026-04-10 00:49:28,445 | INFO | 
+Epoch 74/100
+2026-04-10 00:55:03,135 | INFO | Train Loss: 0.4493 | Val Loss: 0.3605 | Val mIoU: 0.5720 | Val mAcc: 0.6503
+2026-04-10 00:55:03,136 | INFO | No improvement. Patience 3/7
+2026-04-10 00:55:03,136 | INFO | 
+Epoch 75/100
+2026-04-10 01:00:41,141 | INFO | Train Loss: 0.3858 | Val Loss: 0.3569 | Val mIoU: 0.5767 | Val mAcc: 0.6650
+2026-04-10 01:00:41,329 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-10 01:00:41,329 | INFO | 
+Epoch 76/100
+2026-04-10 01:06:16,617 | INFO | Train Loss: 0.4016 | Val Loss: 0.3532 | Val mIoU: 0.5756 | Val mAcc: 0.6590
+2026-04-10 01:06:16,618 | INFO | No improvement. Patience 1/7
+2026-04-10 01:06:16,618 | INFO | 
+Epoch 77/100
+2026-04-10 01:12:00,932 | INFO | Train Loss: 0.4370 | Val Loss: 0.3541 | Val mIoU: 0.5752 | Val mAcc: 0.6604
+2026-04-10 01:12:00,933 | INFO | No improvement. Patience 2/7
+2026-04-10 01:12:00,933 | INFO | 
+Epoch 78/100
+2026-04-10 01:17:35,124 | INFO | Train Loss: 0.3822 | Val Loss: 0.3518 | Val mIoU: 0.5761 | Val mAcc: 0.6590
+2026-04-10 01:17:35,126 | INFO | No improvement. Patience 3/7
+2026-04-10 01:17:35,126 | INFO | 
+Epoch 79/100
+2026-04-10 01:23:09,569 | INFO | Train Loss: 0.4135 | Val Loss: 0.3517 | Val mIoU: 0.5767 | Val mAcc: 0.6615
+2026-04-10 01:23:09,752 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-10 01:23:09,752 | INFO | 
+Epoch 80/100
+2026-04-10 01:28:49,872 | INFO | Train Loss: 0.3926 | Val Loss: 0.3515 | Val mIoU: 0.5759 | Val mAcc: 0.6590
+2026-04-10 01:28:49,874 | INFO | No improvement. Patience 1/7
+2026-04-10 01:28:49,874 | INFO | 
+Epoch 81/100
+2026-04-10 01:34:29,201 | INFO | Train Loss: 0.4047 | Val Loss: 0.3514 | Val mIoU: 0.5779 | Val mAcc: 0.6652
+2026-04-10 01:34:29,387 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-10 01:34:29,387 | INFO | 
+Epoch 82/100
+2026-04-10 01:40:11,609 | INFO | Train Loss: 0.4267 | Val Loss: 0.3516 | Val mIoU: 0.5770 | Val mAcc: 0.6621
+2026-04-10 01:40:11,611 | INFO | No improvement. Patience 1/7
+2026-04-10 01:40:11,611 | INFO | 
+Epoch 83/100
+2026-04-10 01:45:54,984 | INFO | Train Loss: 0.4066 | Val Loss: 0.3545 | Val mIoU: 0.5755 | Val mAcc: 0.6551
+2026-04-10 01:45:54,984 | INFO | No improvement. Patience 2/7
+2026-04-10 01:45:54,985 | INFO | 
+Epoch 84/100
+2026-04-10 01:51:30,886 | INFO | Train Loss: 0.4032 | Val Loss: 0.3525 | Val mIoU: 0.5759 | Val mAcc: 0.6577
+2026-04-10 01:51:30,887 | INFO | No improvement. Patience 3/7
+2026-04-10 01:51:30,887 | INFO | 
+Epoch 85/100
+2026-04-10 01:57:04,743 | INFO | Train Loss: 0.4267 | Val Loss: 0.3527 | Val mIoU: 0.5763 | Val mAcc: 0.6616
+2026-04-10 01:57:04,745 | INFO | No improvement. Patience 4/7
+2026-04-10 01:57:04,745 | INFO | 
+Epoch 86/100
+2026-04-10 02:02:41,927 | INFO | Train Loss: 0.4221 | Val Loss: 0.3517 | Val mIoU: 0.5779 | Val mAcc: 0.6626
+2026-04-10 02:02:42,141 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_1_best.pth
+2026-04-10 02:02:42,142 | INFO | 
+Epoch 87/100
+2026-04-10 02:08:18,292 | INFO | Train Loss: 0.3943 | Val Loss: 0.3526 | Val mIoU: 0.5765 | Val mAcc: 0.6638
+2026-04-10 02:08:18,293 | INFO | No improvement. Patience 1/7
+2026-04-10 02:08:18,293 | INFO | 
+Epoch 88/100
+2026-04-10 02:13:54,100 | INFO | Train Loss: 0.3777 | Val Loss: 0.3537 | Val mIoU: 0.5774 | Val mAcc: 0.6691
+2026-04-10 02:13:54,101 | INFO | No improvement. Patience 2/7
+2026-04-10 02:13:54,101 | INFO | 
+Epoch 89/100
+2026-04-10 02:19:33,144 | INFO | Train Loss: 0.3994 | Val Loss: 0.3514 | Val mIoU: 0.5751 | Val mAcc: 0.6612
+2026-04-10 02:19:33,145 | INFO | No improvement. Patience 3/7
+2026-04-10 02:19:33,145 | INFO | 
+Epoch 90/100
+2026-04-10 02:25:13,889 | INFO | Train Loss: 0.4232 | Val Loss: 0.3509 | Val mIoU: 0.5776 | Val mAcc: 0.6625
+2026-04-10 02:25:13,890 | INFO | No improvement. Patience 4/7
+2026-04-10 02:25:13,890 | INFO | 
+Epoch 91/100
+2026-04-10 02:30:51,613 | INFO | Train Loss: 0.4057 | Val Loss: 0.3505 | Val mIoU: 0.5776 | Val mAcc: 0.6642
+2026-04-10 02:30:51,614 | INFO | No improvement. Patience 5/7
+2026-04-10 02:30:51,614 | INFO | 
+Epoch 92/100
+2026-04-10 02:36:34,394 | INFO | Train Loss: 0.3970 | Val Loss: 0.3538 | Val mIoU: 0.5759 | Val mAcc: 0.6577
+2026-04-10 02:36:34,394 | INFO | No improvement. Patience 6/7
+2026-04-10 02:36:34,394 | INFO | 
+Epoch 93/100
+2026-04-10 02:42:15,676 | INFO | Train Loss: 0.4648 | Val Loss: 0.3577 | Val mIoU: 0.5751 | Val mAcc: 0.6586
+2026-04-10 02:42:15,677 | INFO | No improvement. Patience 7/7
+2026-04-10 02:42:15,677 | INFO | Early stopping.
+2026-04-10 02:42:16,088 | INFO | ✓ Loss curves saved to /mnt/primary/image-segmentation-training/results/fold_1_curves.png
+2026-04-10 02:42:16,088 | INFO | ✓ History CSV saved to /mnt/primary/image-segmentation-training/results/fold_1_history.csv
+2026-04-10 02:42:16,088 | INFO | 
+Best epoch: 86 | Best mIoU: 0.5779
+2026-04-10 02:42:16,299 | INFO | 
+=======================================================
+2026-04-10 02:42:16,299 | INFO |   Fold 2 / 5  —  train: 642  val: 161
+2026-04-10 02:42:16,299 | INFO | =======================================================
+2026-04-10 02:42:16,602 | INFO | 
+Epoch 1/100
+2026-04-10 02:47:48,797 | INFO | Train Loss: 1.9265 | Val Loss: 1.8386 | Val mIoU: 0.1022 | Val mAcc: 0.1880
+2026-04-10 02:47:48,979 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 02:47:48,979 | INFO | 
+Epoch 2/100
+2026-04-10 02:53:23,119 | INFO | Train Loss: 1.7356 | Val Loss: 1.5135 | Val mIoU: 0.2135 | Val mAcc: 0.2848
+2026-04-10 02:53:23,299 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 02:53:23,299 | INFO | 
+Epoch 3/100
+2026-04-10 02:58:59,913 | INFO | Train Loss: 1.4378 | Val Loss: 1.1841 | Val mIoU: 0.2117 | Val mAcc: 0.2929
+2026-04-10 02:58:59,915 | INFO | No improvement. Patience 1/7
+2026-04-10 02:58:59,915 | INFO | 
+Epoch 4/100
+2026-04-10 03:04:35,509 | INFO | Train Loss: 1.1868 | Val Loss: 0.9568 | Val mIoU: 0.2412 | Val mAcc: 0.3339
+2026-04-10 03:04:35,701 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 03:04:35,701 | INFO | 
+Epoch 5/100
+2026-04-10 03:10:16,075 | INFO | Train Loss: 1.0437 | Val Loss: 0.8105 | Val mIoU: 0.2911 | Val mAcc: 0.3863
+2026-04-10 03:10:16,255 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 03:10:16,256 | INFO | 
+Epoch 6/100
+2026-04-10 03:15:51,546 | INFO | Train Loss: 0.9929 | Val Loss: 0.7175 | Val mIoU: 0.3068 | Val mAcc: 0.3960
+2026-04-10 03:15:51,758 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 03:15:51,758 | INFO | 
+Epoch 7/100
+2026-04-10 03:21:28,410 | INFO | Train Loss: 0.8870 | Val Loss: 0.6550 | Val mIoU: 0.3602 | Val mAcc: 0.4620
+2026-04-10 03:21:28,592 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 03:21:28,593 | INFO | 
+Epoch 8/100
+2026-04-10 03:27:06,895 | INFO | Train Loss: 0.8023 | Val Loss: 0.5915 | Val mIoU: 0.4486 | Val mAcc: 0.5389
+2026-04-10 03:27:07,151 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 03:27:07,152 | INFO | 
+Epoch 9/100
+2026-04-10 03:32:42,766 | INFO | Train Loss: 0.8187 | Val Loss: 0.5392 | Val mIoU: 0.4834 | Val mAcc: 0.5805
+2026-04-10 03:32:42,973 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 03:32:42,973 | INFO | 
+Epoch 10/100
+2026-04-10 03:38:17,428 | INFO | Train Loss: 0.7590 | Val Loss: 0.5149 | Val mIoU: 0.4948 | Val mAcc: 0.5926
+2026-04-10 03:38:17,607 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 03:38:17,607 | INFO | 
+Epoch 11/100
+2026-04-10 03:43:51,065 | INFO | Train Loss: 0.6699 | Val Loss: 0.4984 | Val mIoU: 0.5277 | Val mAcc: 0.6376
+2026-04-10 03:43:51,247 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 03:43:51,247 | INFO | 
+Epoch 12/100
+2026-04-10 03:49:26,210 | INFO | Train Loss: 0.6484 | Val Loss: 0.4621 | Val mIoU: 0.5321 | Val mAcc: 0.6345
+2026-04-10 03:49:26,395 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 03:49:26,395 | INFO | 
+Epoch 13/100
+2026-04-10 03:54:54,704 | INFO | Train Loss: 0.6072 | Val Loss: 0.4610 | Val mIoU: 0.5387 | Val mAcc: 0.6407
+2026-04-10 03:54:54,882 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 03:54:54,882 | INFO | 
+Epoch 14/100
+2026-04-10 04:00:23,987 | INFO | Train Loss: 0.6485 | Val Loss: 0.4548 | Val mIoU: 0.5251 | Val mAcc: 0.6132
+2026-04-10 04:00:28,830 | INFO | No improvement. Patience 1/7
+2026-04-10 04:00:28,830 | INFO | 
+Epoch 15/100
+2026-04-10 04:05:58,243 | INFO | Train Loss: 0.6310 | Val Loss: 0.4337 | Val mIoU: 0.5425 | Val mAcc: 0.6385
+2026-04-10 04:05:58,454 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 04:05:58,454 | INFO | 
+Epoch 16/100
+2026-04-10 04:11:26,426 | INFO | Train Loss: 0.5654 | Val Loss: 0.4212 | Val mIoU: 0.5584 | Val mAcc: 0.6506
+2026-04-10 04:11:26,613 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 04:11:26,613 | INFO | 
+Epoch 17/100
+2026-04-10 04:16:55,572 | INFO | Train Loss: 0.6064 | Val Loss: 0.4337 | Val mIoU: 0.5593 | Val mAcc: 0.6669
+2026-04-10 04:16:55,755 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 04:16:55,755 | INFO | 
+Epoch 18/100
+2026-04-10 04:22:25,582 | INFO | Train Loss: 0.5393 | Val Loss: 0.4103 | Val mIoU: 0.5647 | Val mAcc: 0.6580
+2026-04-10 04:22:25,765 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 04:22:25,765 | INFO | 
+Epoch 19/100
+2026-04-10 04:28:01,796 | INFO | Train Loss: 0.5964 | Val Loss: 0.4463 | Val mIoU: 0.5516 | Val mAcc: 0.6664
+2026-04-10 04:28:01,797 | INFO | No improvement. Patience 1/7
+2026-04-10 04:28:01,797 | INFO | 
+Epoch 20/100
+2026-04-10 04:33:39,879 | INFO | Train Loss: 0.5976 | Val Loss: 0.4074 | Val mIoU: 0.5689 | Val mAcc: 0.6688
+2026-04-10 04:33:40,058 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 04:33:40,058 | INFO | 
+Epoch 21/100
+2026-04-10 04:39:16,612 | INFO | Train Loss: 0.5498 | Val Loss: 0.3993 | Val mIoU: 0.5719 | Val mAcc: 0.6670
+2026-04-10 04:39:16,798 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 04:39:16,799 | INFO | 
+Epoch 22/100
+2026-04-10 04:44:46,815 | INFO | Train Loss: 0.5672 | Val Loss: 0.3952 | Val mIoU: 0.5743 | Val mAcc: 0.6691
+2026-04-10 04:44:47,011 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 04:44:47,012 | INFO | 
+Epoch 23/100
+2026-04-10 04:50:22,798 | INFO | Train Loss: 0.5487 | Val Loss: 0.3928 | Val mIoU: 0.5768 | Val mAcc: 0.6718
+2026-04-10 04:50:22,989 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 04:50:22,990 | INFO | 
+Epoch 24/100
+2026-04-10 04:55:57,356 | INFO | Train Loss: 0.5244 | Val Loss: 0.3919 | Val mIoU: 0.5700 | Val mAcc: 0.6614
+2026-04-10 04:55:57,357 | INFO | No improvement. Patience 1/7
+2026-04-10 04:55:57,358 | INFO | 
+Epoch 25/100
+2026-04-10 05:01:27,528 | INFO | Train Loss: 0.5137 | Val Loss: 0.3987 | Val mIoU: 0.5833 | Val mAcc: 0.6896
+2026-04-10 05:01:27,722 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 05:01:27,722 | INFO | 
+Epoch 26/100
+2026-04-10 05:06:58,899 | INFO | Train Loss: 0.5124 | Val Loss: 0.3820 | Val mIoU: 0.5791 | Val mAcc: 0.6721
+2026-04-10 05:06:58,900 | INFO | No improvement. Patience 1/7
+2026-04-10 05:06:58,900 | INFO | 
+Epoch 27/100
+2026-04-10 05:12:30,454 | INFO | Train Loss: 0.5153 | Val Loss: 0.3773 | Val mIoU: 0.5878 | Val mAcc: 0.6810
+2026-04-10 05:12:30,634 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 05:12:30,634 | INFO | 
+Epoch 28/100
+2026-04-10 05:18:00,605 | INFO | Train Loss: 0.4867 | Val Loss: 0.3903 | Val mIoU: 0.5786 | Val mAcc: 0.6812
+2026-04-10 05:18:00,606 | INFO | No improvement. Patience 1/7
+2026-04-10 05:18:00,606 | INFO | 
+Epoch 29/100
+2026-04-10 05:23:39,535 | INFO | Train Loss: 0.4894 | Val Loss: 0.3796 | Val mIoU: 0.5866 | Val mAcc: 0.6846
+2026-04-10 05:23:39,536 | INFO | No improvement. Patience 2/7
+2026-04-10 05:23:39,536 | INFO | 
+Epoch 30/100
+2026-04-10 05:29:14,631 | INFO | Train Loss: 0.5136 | Val Loss: 0.3810 | Val mIoU: 0.5840 | Val mAcc: 0.6873
+2026-04-10 05:29:14,632 | INFO | No improvement. Patience 3/7
+2026-04-10 05:29:14,632 | INFO | 
+Epoch 31/100
+2026-04-10 05:34:50,251 | INFO | Train Loss: 0.5021 | Val Loss: 0.3787 | Val mIoU: 0.5877 | Val mAcc: 0.6902
+2026-04-10 05:34:50,252 | INFO | No improvement. Patience 4/7
+2026-04-10 05:34:50,252 | INFO | 
+Epoch 32/100
+2026-04-10 05:40:26,399 | INFO | Train Loss: 0.4759 | Val Loss: 0.3656 | Val mIoU: 0.5941 | Val mAcc: 0.6827
+2026-04-10 05:40:26,576 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 05:40:26,576 | INFO | 
+Epoch 33/100
+2026-04-10 05:46:01,845 | INFO | Train Loss: 0.5201 | Val Loss: 0.3726 | Val mIoU: 0.5946 | Val mAcc: 0.6948
+2026-04-10 05:46:02,030 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 05:46:02,031 | INFO | 
+Epoch 34/100
+2026-04-10 05:51:42,335 | INFO | Train Loss: 0.4361 | Val Loss: 0.3711 | Val mIoU: 0.5964 | Val mAcc: 0.6938
+2026-04-10 05:51:42,517 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 05:51:42,517 | INFO | 
+Epoch 35/100
+2026-04-10 05:57:18,649 | INFO | Train Loss: 0.4921 | Val Loss: 0.3629 | Val mIoU: 0.5922 | Val mAcc: 0.6829
+2026-04-10 05:57:18,650 | INFO | No improvement. Patience 1/7
+2026-04-10 05:57:18,650 | INFO | 
+Epoch 36/100
+2026-04-10 06:02:55,509 | INFO | Train Loss: 0.4738 | Val Loss: 0.3759 | Val mIoU: 0.5875 | Val mAcc: 0.6891
+2026-04-10 06:02:55,510 | INFO | No improvement. Patience 2/7
+2026-04-10 06:02:55,510 | INFO | 
+Epoch 37/100
+2026-04-10 06:08:29,809 | INFO | Train Loss: 0.4504 | Val Loss: 0.3637 | Val mIoU: 0.5913 | Val mAcc: 0.6902
+2026-04-10 06:08:29,810 | INFO | No improvement. Patience 3/7
+2026-04-10 06:08:29,810 | INFO | 
+Epoch 38/100
+2026-04-10 06:14:08,297 | INFO | Train Loss: 0.4875 | Val Loss: 0.3678 | Val mIoU: 0.5873 | Val mAcc: 0.6810
+2026-04-10 06:14:08,298 | INFO | No improvement. Patience 4/7
+2026-04-10 06:14:08,298 | INFO | 
+Epoch 39/100
+2026-04-10 06:19:41,782 | INFO | Train Loss: 0.4494 | Val Loss: 0.3749 | Val mIoU: 0.5908 | Val mAcc: 0.6924
+2026-04-10 06:19:41,784 | INFO | No improvement. Patience 5/7
+2026-04-10 06:19:41,784 | INFO | 
+Epoch 40/100
+2026-04-10 06:25:15,793 | INFO | Train Loss: 0.4219 | Val Loss: 0.3585 | Val mIoU: 0.5954 | Val mAcc: 0.6904
+2026-04-10 06:25:15,793 | INFO | No improvement. Patience 6/7
+2026-04-10 06:25:15,793 | INFO | 
+Epoch 41/100
+2026-04-10 06:30:52,895 | INFO | Train Loss: 0.4603 | Val Loss: 0.3549 | Val mIoU: 0.5980 | Val mAcc: 0.6915
+2026-04-10 06:30:53,109 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 06:30:53,109 | INFO | 
+Epoch 42/100
+2026-04-10 06:36:28,250 | INFO | Train Loss: 0.4692 | Val Loss: 0.3593 | Val mIoU: 0.5985 | Val mAcc: 0.6969
+2026-04-10 06:36:28,428 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 06:36:28,429 | INFO | 
+Epoch 43/100
+2026-04-10 06:42:02,304 | INFO | Train Loss: 0.4540 | Val Loss: 0.3563 | Val mIoU: 0.5938 | Val mAcc: 0.6879
+2026-04-10 06:42:02,305 | INFO | No improvement. Patience 1/7
+2026-04-10 06:42:02,305 | INFO | 
+Epoch 44/100
+2026-04-10 06:47:33,949 | INFO | Train Loss: 0.4694 | Val Loss: 0.3670 | Val mIoU: 0.5938 | Val mAcc: 0.7004
+2026-04-10 06:47:33,950 | INFO | No improvement. Patience 2/7
+2026-04-10 06:47:33,950 | INFO | 
+Epoch 45/100
+2026-04-10 06:53:04,061 | INFO | Train Loss: 0.4492 | Val Loss: 0.3550 | Val mIoU: 0.5923 | Val mAcc: 0.6826
+2026-04-10 06:53:04,063 | INFO | No improvement. Patience 3/7
+2026-04-10 06:53:04,063 | INFO | 
+Epoch 46/100
+2026-04-10 06:58:34,751 | INFO | Train Loss: 0.4556 | Val Loss: 0.3598 | Val mIoU: 0.5943 | Val mAcc: 0.6943
+2026-04-10 06:58:34,752 | INFO | No improvement. Patience 4/7
+2026-04-10 06:58:34,752 | INFO | 
+Epoch 47/100
+2026-04-10 07:04:07,546 | INFO | Train Loss: 0.4512 | Val Loss: 0.3632 | Val mIoU: 0.5947 | Val mAcc: 0.6988
+2026-04-10 07:04:07,547 | INFO | No improvement. Patience 5/7
+2026-04-10 07:04:07,547 | INFO | 
+Epoch 48/100
+2026-04-10 07:09:42,012 | INFO | Train Loss: 0.4325 | Val Loss: 0.3610 | Val mIoU: 0.5945 | Val mAcc: 0.6980
+2026-04-10 07:09:42,014 | INFO | No improvement. Patience 6/7
+2026-04-10 07:09:42,015 | INFO | 
+Epoch 49/100
+2026-04-10 07:15:16,535 | INFO | Train Loss: 0.4286 | Val Loss: 0.3549 | Val mIoU: 0.5989 | Val mAcc: 0.6972
+2026-04-10 07:15:16,734 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 07:15:16,734 | INFO | 
+Epoch 50/100
+2026-04-10 07:20:52,094 | INFO | Train Loss: 0.4478 | Val Loss: 0.3557 | Val mIoU: 0.5983 | Val mAcc: 0.6985
+2026-04-10 07:20:52,095 | INFO | No improvement. Patience 1/7
+2026-04-10 07:20:52,095 | INFO | 
+Epoch 51/100
+2026-04-10 07:26:31,785 | INFO | Train Loss: 0.4173 | Val Loss: 0.3504 | Val mIoU: 0.6022 | Val mAcc: 0.6971
+2026-04-10 07:26:31,963 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 07:26:31,964 | INFO | 
+Epoch 52/100
+2026-04-10 07:32:06,953 | INFO | Train Loss: 0.4507 | Val Loss: 0.3595 | Val mIoU: 0.6010 | Val mAcc: 0.7059
+2026-04-10 07:32:06,954 | INFO | No improvement. Patience 1/7
+2026-04-10 07:32:06,954 | INFO | 
+Epoch 53/100
+2026-04-10 07:37:41,680 | INFO | Train Loss: 0.4258 | Val Loss: 0.3521 | Val mIoU: 0.5970 | Val mAcc: 0.6929
+2026-04-10 07:37:41,681 | INFO | No improvement. Patience 2/7
+2026-04-10 07:37:41,682 | INFO | 
+Epoch 54/100
+2026-04-10 07:43:17,220 | INFO | Train Loss: 0.4277 | Val Loss: 0.3479 | Val mIoU: 0.5978 | Val mAcc: 0.6908
+2026-04-10 07:43:17,222 | INFO | No improvement. Patience 3/7
+2026-04-10 07:43:17,222 | INFO | 
+Epoch 55/100
+2026-04-10 07:48:51,667 | INFO | Train Loss: 0.4203 | Val Loss: 0.3488 | Val mIoU: 0.5953 | Val mAcc: 0.6909
+2026-04-10 07:48:51,668 | INFO | No improvement. Patience 4/7
+2026-04-10 07:48:51,668 | INFO | 
+Epoch 56/100
+2026-04-10 07:54:29,265 | INFO | Train Loss: 0.4216 | Val Loss: 0.3509 | Val mIoU: 0.6016 | Val mAcc: 0.6979
+2026-04-10 07:54:29,266 | INFO | No improvement. Patience 5/7
+2026-04-10 07:54:29,266 | INFO | 
+Epoch 57/100
+2026-04-10 08:00:04,524 | INFO | Train Loss: 0.4442 | Val Loss: 0.3494 | Val mIoU: 0.5981 | Val mAcc: 0.6952
+2026-04-10 08:00:04,526 | INFO | No improvement. Patience 6/7
+2026-04-10 08:00:04,526 | INFO | 
+Epoch 58/100
+2026-04-10 08:05:41,057 | INFO | Train Loss: 0.4130 | Val Loss: 0.3433 | Val mIoU: 0.6055 | Val mAcc: 0.6975
+2026-04-10 08:05:41,256 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_2_best.pth
+2026-04-10 08:05:41,256 | INFO | 
+Epoch 59/100
+2026-04-10 08:11:17,856 | INFO | Train Loss: 0.4165 | Val Loss: 0.3520 | Val mIoU: 0.6002 | Val mAcc: 0.6987
+2026-04-10 08:11:17,858 | INFO | No improvement. Patience 1/7
+2026-04-10 08:11:17,858 | INFO | 
+Epoch 60/100
+2026-04-10 08:16:54,196 | INFO | Train Loss: 0.4305 | Val Loss: 0.3494 | Val mIoU: 0.6001 | Val mAcc: 0.6989
+2026-04-10 08:16:54,197 | INFO | No improvement. Patience 2/7
+2026-04-10 08:16:54,197 | INFO | 
+Epoch 61/100
+2026-04-10 08:22:34,244 | INFO | Train Loss: 0.3944 | Val Loss: 0.3464 | Val mIoU: 0.6020 | Val mAcc: 0.6999
+2026-04-10 08:22:34,245 | INFO | No improvement. Patience 3/7
+2026-04-10 08:22:34,245 | INFO | 
+Epoch 62/100
+2026-04-10 08:28:10,856 | INFO | Train Loss: 0.4167 | Val Loss: 0.3421 | Val mIoU: 0.6055 | Val mAcc: 0.6948
+2026-04-10 08:28:10,856 | INFO | No improvement. Patience 4/7
+2026-04-10 08:28:10,857 | INFO | 
+Epoch 63/100
+2026-04-10 08:33:58,263 | INFO | Train Loss: 0.4222 | Val Loss: 0.3461 | Val mIoU: 0.6001 | Val mAcc: 0.6965
+2026-04-10 08:33:58,282 | INFO | No improvement. Patience 5/7
+2026-04-10 08:33:58,282 | INFO | 
+Epoch 64/100
+2026-04-10 08:39:40,814 | INFO | Train Loss: 0.4343 | Val Loss: 0.3439 | Val mIoU: 0.6008 | Val mAcc: 0.6926
+2026-04-10 08:39:40,815 | INFO | No improvement. Patience 6/7
+2026-04-10 08:39:40,815 | INFO | 
+Epoch 65/100
+2026-04-10 08:45:19,536 | INFO | Train Loss: 0.4285 | Val Loss: 0.3467 | Val mIoU: 0.6048 | Val mAcc: 0.7031
+2026-04-10 08:45:19,538 | INFO | No improvement. Patience 7/7
+2026-04-10 08:45:19,538 | INFO | Early stopping.
+2026-04-10 08:45:19,943 | INFO | ✓ Loss curves saved to /mnt/primary/image-segmentation-training/results/fold_2_curves.png
+2026-04-10 08:45:19,944 | INFO | ✓ History CSV saved to /mnt/primary/image-segmentation-training/results/fold_2_history.csv
+2026-04-10 08:45:19,944 | INFO | 
+Best epoch: 58 | Best mIoU: 0.6055
+2026-04-10 08:45:20,161 | INFO | 
+=======================================================
+2026-04-10 08:45:20,161 | INFO |   Fold 3 / 5  —  train: 642  val: 161
+2026-04-10 08:45:20,161 | INFO | =======================================================
+2026-04-10 08:45:20,515 | INFO | 
+Epoch 1/100
+2026-04-10 08:50:59,479 | INFO | Train Loss: 1.9263 | Val Loss: 1.8361 | Val mIoU: 0.0895 | Val mAcc: 0.1628
+2026-04-10 08:50:59,665 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 08:50:59,665 | INFO | 
+Epoch 2/100
+2026-04-10 08:56:32,316 | INFO | Train Loss: 1.7321 | Val Loss: 1.5128 | Val mIoU: 0.2039 | Val mAcc: 0.2666
+2026-04-10 08:56:32,502 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 08:56:32,503 | INFO | 
+Epoch 3/100
+2026-04-10 09:02:05,038 | INFO | Train Loss: 1.4480 | Val Loss: 1.1812 | Val mIoU: 0.2004 | Val mAcc: 0.2796
+2026-04-10 09:02:05,039 | INFO | No improvement. Patience 1/7
+2026-04-10 09:02:05,040 | INFO | 
+Epoch 4/100
+2026-04-10 09:07:38,376 | INFO | Train Loss: 1.1902 | Val Loss: 0.9856 | Val mIoU: 0.2557 | Val mAcc: 0.3419
+2026-04-10 09:07:38,559 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 09:07:38,559 | INFO | 
+Epoch 5/100
+2026-04-10 09:13:16,285 | INFO | Train Loss: 1.0274 | Val Loss: 0.8731 | Val mIoU: 0.2841 | Val mAcc: 0.3761
+2026-04-10 09:13:16,469 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 09:13:16,469 | INFO | 
+Epoch 6/100
+2026-04-10 09:18:51,272 | INFO | Train Loss: 0.9809 | Val Loss: 0.7731 | Val mIoU: 0.3098 | Val mAcc: 0.4017
+2026-04-10 09:18:51,639 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 09:18:51,639 | INFO | 
+Epoch 7/100
+2026-04-10 09:24:26,469 | INFO | Train Loss: 0.8979 | Val Loss: 0.7170 | Val mIoU: 0.3894 | Val mAcc: 0.4866
+2026-04-10 09:24:26,654 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 09:24:26,654 | INFO | 
+Epoch 8/100
+2026-04-10 09:30:12,434 | INFO | Train Loss: 0.8080 | Val Loss: 0.6727 | Val mIoU: 0.4397 | Val mAcc: 0.5375
+2026-04-10 09:30:12,618 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 09:30:12,618 | INFO | 
+Epoch 9/100
+2026-04-10 09:35:52,947 | INFO | Train Loss: 0.7758 | Val Loss: 0.6438 | Val mIoU: 0.4767 | Val mAcc: 0.5888
+2026-04-10 09:35:53,128 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 09:35:53,128 | INFO | 
+Epoch 10/100
+2026-04-10 09:41:34,486 | INFO | Train Loss: 0.7000 | Val Loss: 0.5738 | Val mIoU: 0.4977 | Val mAcc: 0.5959
+2026-04-10 09:41:34,667 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 09:41:34,667 | INFO | 
+Epoch 11/100
+2026-04-10 09:47:07,304 | INFO | Train Loss: 0.7163 | Val Loss: 0.5820 | Val mIoU: 0.4996 | Val mAcc: 0.6077
+2026-04-10 09:47:07,492 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 09:47:07,492 | INFO | 
+Epoch 12/100
+2026-04-10 09:52:39,658 | INFO | Train Loss: 0.6463 | Val Loss: 0.5520 | Val mIoU: 0.5144 | Val mAcc: 0.6161
+2026-04-10 09:52:39,850 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 09:52:39,850 | INFO | 
+Epoch 13/100
+2026-04-10 09:58:15,531 | INFO | Train Loss: 0.6660 | Val Loss: 0.5468 | Val mIoU: 0.5300 | Val mAcc: 0.6329
+2026-04-10 09:58:15,724 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 09:58:15,725 | INFO | 
+Epoch 14/100
+2026-04-10 10:03:45,099 | INFO | Train Loss: 0.6207 | Val Loss: 0.5320 | Val mIoU: 0.5246 | Val mAcc: 0.6245
+2026-04-10 10:03:45,101 | INFO | No improvement. Patience 1/7
+2026-04-10 10:03:45,101 | INFO | 
+Epoch 15/100
+2026-04-10 10:09:15,918 | INFO | Train Loss: 0.5930 | Val Loss: 0.5459 | Val mIoU: 0.5346 | Val mAcc: 0.6409
+2026-04-10 10:09:16,104 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 10:09:16,105 | INFO | 
+Epoch 16/100
+2026-04-10 10:14:52,317 | INFO | Train Loss: 0.6058 | Val Loss: 0.5318 | Val mIoU: 0.5331 | Val mAcc: 0.6309
+2026-04-10 10:14:52,317 | INFO | No improvement. Patience 1/7
+2026-04-10 10:14:52,317 | INFO | 
+Epoch 17/100
+2026-04-10 10:20:23,956 | INFO | Train Loss: 0.5644 | Val Loss: 0.5213 | Val mIoU: 0.5398 | Val mAcc: 0.6420
+2026-04-10 10:20:24,136 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 10:20:24,136 | INFO | 
+Epoch 18/100
+2026-04-10 10:25:56,764 | INFO | Train Loss: 0.5784 | Val Loss: 0.5154 | Val mIoU: 0.5528 | Val mAcc: 0.6564
+2026-04-10 10:25:56,946 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 10:25:56,947 | INFO | 
+Epoch 19/100
+2026-04-10 10:31:28,643 | INFO | Train Loss: 0.5348 | Val Loss: 0.5242 | Val mIoU: 0.5533 | Val mAcc: 0.6434
+2026-04-10 10:31:28,823 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 10:31:28,823 | INFO | 
+Epoch 20/100
+2026-04-10 10:37:00,598 | INFO | Train Loss: 0.5578 | Val Loss: 0.5110 | Val mIoU: 0.5565 | Val mAcc: 0.6541
+2026-04-10 10:37:00,795 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 10:37:00,795 | INFO | 
+Epoch 21/100
+2026-04-10 10:42:34,486 | INFO | Train Loss: 0.5536 | Val Loss: 0.4819 | Val mIoU: 0.5655 | Val mAcc: 0.6461
+2026-04-10 10:42:34,667 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 10:42:34,667 | INFO | 
+Epoch 22/100
+2026-04-10 10:48:11,241 | INFO | Train Loss: 0.5522 | Val Loss: 0.4918 | Val mIoU: 0.5692 | Val mAcc: 0.6609
+2026-04-10 10:48:11,460 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 10:48:11,460 | INFO | 
+Epoch 23/100
+2026-04-10 10:53:47,976 | INFO | Train Loss: 0.5601 | Val Loss: 0.4752 | Val mIoU: 0.5788 | Val mAcc: 0.6683
+2026-04-10 10:53:48,174 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 10:53:48,174 | INFO | 
+Epoch 24/100
+2026-04-10 10:59:28,186 | INFO | Train Loss: 0.5334 | Val Loss: 0.4935 | Val mIoU: 0.5719 | Val mAcc: 0.6659
+2026-04-10 10:59:28,187 | INFO | No improvement. Patience 1/7
+2026-04-10 10:59:28,187 | INFO | 
+Epoch 25/100
+2026-04-10 11:05:04,210 | INFO | Train Loss: 0.5029 | Val Loss: 0.4569 | Val mIoU: 0.5763 | Val mAcc: 0.6657
+2026-04-10 11:05:04,211 | INFO | No improvement. Patience 2/7
+2026-04-10 11:05:04,211 | INFO | 
+Epoch 26/100
+2026-04-10 11:10:40,814 | INFO | Train Loss: 0.5186 | Val Loss: 0.5309 | Val mIoU: 0.5594 | Val mAcc: 0.6597
+2026-04-10 11:10:40,815 | INFO | No improvement. Patience 3/7
+2026-04-10 11:10:40,815 | INFO | 
+Epoch 27/100
+2026-04-10 11:16:16,242 | INFO | Train Loss: 0.5069 | Val Loss: 0.4783 | Val mIoU: 0.5818 | Val mAcc: 0.6733
+2026-04-10 11:16:17,319 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 11:16:17,319 | INFO | 
+Epoch 28/100
+2026-04-10 11:21:51,099 | INFO | Train Loss: 0.5454 | Val Loss: 0.4639 | Val mIoU: 0.5811 | Val mAcc: 0.6673
+2026-04-10 11:21:51,099 | INFO | No improvement. Patience 1/7
+2026-04-10 11:21:51,099 | INFO | 
+Epoch 29/100
+2026-04-10 11:27:20,787 | INFO | Train Loss: 0.5413 | Val Loss: 0.4818 | Val mIoU: 0.5871 | Val mAcc: 0.6800
+2026-04-10 11:27:20,970 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 11:27:20,970 | INFO | 
+Epoch 30/100
+2026-04-10 11:32:54,618 | INFO | Train Loss: 0.5103 | Val Loss: 0.4667 | Val mIoU: 0.5876 | Val mAcc: 0.6779
+2026-04-10 11:32:54,796 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 11:32:54,796 | INFO | 
+Epoch 31/100
+2026-04-10 11:38:29,185 | INFO | Train Loss: 0.5236 | Val Loss: 0.4667 | Val mIoU: 0.5883 | Val mAcc: 0.6701
+2026-04-10 11:38:29,372 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 11:38:29,372 | INFO | 
+Epoch 32/100
+2026-04-10 11:44:06,385 | INFO | Train Loss: 0.4645 | Val Loss: 0.4766 | Val mIoU: 0.5811 | Val mAcc: 0.6687
+2026-04-10 11:44:06,386 | INFO | No improvement. Patience 1/7
+2026-04-10 11:44:06,386 | INFO | 
+Epoch 33/100
+2026-04-10 11:49:42,775 | INFO | Train Loss: 0.5011 | Val Loss: 0.4769 | Val mIoU: 0.5965 | Val mAcc: 0.6869
+2026-04-10 11:49:42,973 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 11:49:42,973 | INFO | 
+Epoch 34/100
+2026-04-10 11:55:17,781 | INFO | Train Loss: 0.4867 | Val Loss: 0.4410 | Val mIoU: 0.5929 | Val mAcc: 0.6803
+2026-04-10 11:55:17,782 | INFO | No improvement. Patience 1/7
+2026-04-10 11:55:17,782 | INFO | 
+Epoch 35/100
+2026-04-10 12:00:52,643 | INFO | Train Loss: 0.4861 | Val Loss: 0.4737 | Val mIoU: 0.5910 | Val mAcc: 0.6722
+2026-04-10 12:00:52,644 | INFO | No improvement. Patience 2/7
+2026-04-10 12:00:52,644 | INFO | 
+Epoch 36/100
+2026-04-10 12:06:26,761 | INFO | Train Loss: 0.5087 | Val Loss: 0.4795 | Val mIoU: 0.5842 | Val mAcc: 0.6665
+2026-04-10 12:06:26,763 | INFO | No improvement. Patience 3/7
+2026-04-10 12:06:26,763 | INFO | 
+Epoch 37/100
+2026-04-10 12:11:58,776 | INFO | Train Loss: 0.4944 | Val Loss: 0.4530 | Val mIoU: 0.5931 | Val mAcc: 0.6709
+2026-04-10 12:11:58,777 | INFO | No improvement. Patience 4/7
+2026-04-10 12:11:58,777 | INFO | 
+Epoch 38/100
+2026-04-10 12:17:29,684 | INFO | Train Loss: 0.4607 | Val Loss: 0.4883 | Val mIoU: 0.5913 | Val mAcc: 0.6762
+2026-04-10 12:17:29,686 | INFO | No improvement. Patience 5/7
+2026-04-10 12:17:29,686 | INFO | 
+Epoch 39/100
+2026-04-10 12:23:01,697 | INFO | Train Loss: 0.5088 | Val Loss: 0.4582 | Val mIoU: 0.5954 | Val mAcc: 0.6765
+2026-04-10 12:23:01,702 | INFO | No improvement. Patience 6/7
+2026-04-10 12:23:01,702 | INFO | 
+Epoch 40/100
+2026-04-10 12:28:31,486 | INFO | Train Loss: 0.4587 | Val Loss: 0.4727 | Val mIoU: 0.5970 | Val mAcc: 0.6882
+2026-04-10 12:28:31,681 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 12:28:31,681 | INFO | 
+Epoch 41/100
+2026-04-10 12:34:03,874 | INFO | Train Loss: 0.4912 | Val Loss: 0.4586 | Val mIoU: 0.6020 | Val mAcc: 0.6878
+2026-04-10 12:34:04,055 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 12:34:04,055 | INFO | 
+Epoch 42/100
+2026-04-10 12:39:35,281 | INFO | Train Loss: 0.4611 | Val Loss: 0.4642 | Val mIoU: 0.5989 | Val mAcc: 0.6795
+2026-04-10 12:39:35,282 | INFO | No improvement. Patience 1/7
+2026-04-10 12:39:35,282 | INFO | 
+Epoch 43/100
+2026-04-10 12:45:03,810 | INFO | Train Loss: 0.4847 | Val Loss: 0.4691 | Val mIoU: 0.5964 | Val mAcc: 0.6778
+2026-04-10 12:45:03,812 | INFO | No improvement. Patience 2/7
+2026-04-10 12:45:03,812 | INFO | 
+Epoch 44/100
+2026-04-10 12:50:38,918 | INFO | Train Loss: 0.4592 | Val Loss: 0.4544 | Val mIoU: 0.6016 | Val mAcc: 0.6844
+2026-04-10 12:50:38,919 | INFO | No improvement. Patience 3/7
+2026-04-10 12:50:38,919 | INFO | 
+Epoch 45/100
+2026-04-10 12:56:16,963 | INFO | Train Loss: 0.4786 | Val Loss: 0.4588 | Val mIoU: 0.6044 | Val mAcc: 0.6918
+2026-04-10 12:56:17,143 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 12:56:17,143 | INFO | 
+Epoch 46/100
+2026-04-10 13:01:57,040 | INFO | Train Loss: 0.4437 | Val Loss: 0.4438 | Val mIoU: 0.5984 | Val mAcc: 0.6809
+2026-04-10 13:01:57,041 | INFO | No improvement. Patience 1/7
+2026-04-10 13:01:57,041 | INFO | 
+Epoch 47/100
+2026-04-10 13:07:30,254 | INFO | Train Loss: 0.4574 | Val Loss: 0.4681 | Val mIoU: 0.5997 | Val mAcc: 0.6840
+2026-04-10 13:07:30,255 | INFO | No improvement. Patience 2/7
+2026-04-10 13:07:30,255 | INFO | 
+Epoch 48/100
+2026-04-10 13:13:06,140 | INFO | Train Loss: 0.3971 | Val Loss: 0.4520 | Val mIoU: 0.6020 | Val mAcc: 0.6908
+2026-04-10 13:13:06,141 | INFO | No improvement. Patience 3/7
+2026-04-10 13:13:06,141 | INFO | 
+Epoch 49/100
+2026-04-10 13:18:41,744 | INFO | Train Loss: 0.4400 | Val Loss: 0.4554 | Val mIoU: 0.6043 | Val mAcc: 0.6873
+2026-04-10 13:18:41,746 | INFO | No improvement. Patience 4/7
+2026-04-10 13:18:41,746 | INFO | 
+Epoch 50/100
+2026-04-10 13:24:19,621 | INFO | Train Loss: 0.4284 | Val Loss: 0.4559 | Val mIoU: 0.6055 | Val mAcc: 0.6907
+2026-04-10 13:24:19,813 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 13:24:19,813 | INFO | 
+Epoch 51/100
+2026-04-10 13:29:54,400 | INFO | Train Loss: 0.4535 | Val Loss: 0.4414 | Val mIoU: 0.6060 | Val mAcc: 0.6866
+2026-04-10 13:29:54,592 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 13:29:54,592 | INFO | 
+Epoch 52/100
+2026-04-10 13:35:27,572 | INFO | Train Loss: 0.4766 | Val Loss: 0.4316 | Val mIoU: 0.6013 | Val mAcc: 0.6812
+2026-04-10 13:35:27,573 | INFO | No improvement. Patience 1/7
+2026-04-10 13:35:27,573 | INFO | 
+Epoch 53/100
+2026-04-10 13:41:01,420 | INFO | Train Loss: 0.4354 | Val Loss: 0.4763 | Val mIoU: 0.6008 | Val mAcc: 0.6919
+2026-04-10 13:41:01,421 | INFO | No improvement. Patience 2/7
+2026-04-10 13:41:01,421 | INFO | 
+Epoch 54/100
+2026-04-10 13:46:35,332 | INFO | Train Loss: 0.4411 | Val Loss: 0.4543 | Val mIoU: 0.5983 | Val mAcc: 0.6786
+2026-04-10 13:46:35,333 | INFO | No improvement. Patience 3/7
+2026-04-10 13:46:35,333 | INFO | 
+Epoch 55/100
+2026-04-10 13:52:10,347 | INFO | Train Loss: 0.4437 | Val Loss: 0.4531 | Val mIoU: 0.6037 | Val mAcc: 0.6824
+2026-04-10 13:52:10,348 | INFO | No improvement. Patience 4/7
+2026-04-10 13:52:10,348 | INFO | 
+Epoch 56/100
+2026-04-10 13:57:46,873 | INFO | Train Loss: 0.4437 | Val Loss: 0.4464 | Val mIoU: 0.6081 | Val mAcc: 0.6960
+2026-04-10 13:57:47,081 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_3_best.pth
+2026-04-10 13:57:47,081 | INFO | 
+Epoch 57/100
+2026-04-10 14:03:17,101 | INFO | Train Loss: 0.4205 | Val Loss: 0.4526 | Val mIoU: 0.6053 | Val mAcc: 0.6916
+2026-04-10 14:03:17,103 | INFO | No improvement. Patience 1/7
+2026-04-10 14:03:17,103 | INFO | 
+Epoch 58/100
+2026-04-10 14:08:41,468 | INFO | Train Loss: 0.4126 | Val Loss: 0.4492 | Val mIoU: 0.6075 | Val mAcc: 0.6902
+2026-04-10 14:08:41,470 | INFO | No improvement. Patience 2/7
+2026-04-10 14:08:41,470 | INFO | 
+Epoch 59/100
+2026-04-10 14:14:08,183 | INFO | Train Loss: 0.4316 | Val Loss: 0.4451 | Val mIoU: 0.6037 | Val mAcc: 0.6846
+2026-04-10 14:14:08,184 | INFO | No improvement. Patience 3/7
+2026-04-10 14:14:08,184 | INFO | 
+Epoch 60/100
+2026-04-10 14:19:34,892 | INFO | Train Loss: 0.4127 | Val Loss: 0.4648 | Val mIoU: 0.6037 | Val mAcc: 0.6907
+2026-04-10 14:19:34,893 | INFO | No improvement. Patience 4/7
+2026-04-10 14:19:34,893 | INFO | 
+Epoch 61/100
+2026-04-10 14:24:59,866 | INFO | Train Loss: 0.4486 | Val Loss: 0.4507 | Val mIoU: 0.6036 | Val mAcc: 0.6825
+2026-04-10 14:24:59,868 | INFO | No improvement. Patience 5/7
+2026-04-10 14:24:59,868 | INFO | 
+Epoch 62/100
+2026-04-10 14:30:25,313 | INFO | Train Loss: 0.4152 | Val Loss: 0.4517 | Val mIoU: 0.6005 | Val mAcc: 0.6917
+2026-04-10 14:30:25,314 | INFO | No improvement. Patience 6/7
+2026-04-10 14:30:25,315 | INFO | 
+Epoch 63/100
+2026-04-10 14:35:53,264 | INFO | Train Loss: 0.4116 | Val Loss: 0.4706 | Val mIoU: 0.6014 | Val mAcc: 0.6840
+2026-04-10 14:35:53,265 | INFO | No improvement. Patience 7/7
+2026-04-10 14:35:53,265 | INFO | Early stopping.
+2026-04-10 14:35:53,690 | INFO | ✓ Loss curves saved to /mnt/primary/image-segmentation-training/results/fold_3_curves.png
+2026-04-10 14:35:53,690 | INFO | ✓ History CSV saved to /mnt/primary/image-segmentation-training/results/fold_3_history.csv
+2026-04-10 14:35:53,690 | INFO | 
+Best epoch: 56 | Best mIoU: 0.6081
+2026-04-10 14:35:53,899 | INFO | 
+=======================================================
+2026-04-10 14:35:53,899 | INFO |   Fold 4 / 5  —  train: 643  val: 160
+2026-04-10 14:35:53,899 | INFO | =======================================================
+2026-04-10 14:35:54,232 | INFO | 
+Epoch 1/100
+2026-04-10 14:41:28,077 | INFO | Train Loss: 1.9221 | Val Loss: 1.8263 | Val mIoU: 0.0996 | Val mAcc: 0.1746
+2026-04-10 14:41:28,322 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 14:41:28,322 | INFO | 
+Epoch 2/100
+2026-04-10 14:46:57,589 | INFO | Train Loss: 1.7543 | Val Loss: 1.5015 | Val mIoU: 0.2051 | Val mAcc: 0.2655
+2026-04-10 14:46:57,944 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 14:46:57,944 | INFO | 
+Epoch 3/100
+2026-04-10 14:52:25,931 | INFO | Train Loss: 1.4613 | Val Loss: 1.1401 | Val mIoU: 0.2271 | Val mAcc: 0.2898
+2026-04-10 14:52:26,142 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 14:52:26,142 | INFO | 
+Epoch 4/100
+2026-04-10 14:57:54,675 | INFO | Train Loss: 1.2205 | Val Loss: 0.9085 | Val mIoU: 0.2613 | Val mAcc: 0.3288
+2026-04-10 14:57:55,303 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 14:57:55,303 | INFO | 
+Epoch 5/100
+2026-04-10 15:03:21,629 | INFO | Train Loss: 1.0961 | Val Loss: 0.7479 | Val mIoU: 0.2860 | Val mAcc: 0.3541
+2026-04-10 15:03:22,279 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 15:03:22,279 | INFO | 
+Epoch 6/100
+2026-04-10 15:08:47,309 | INFO | Train Loss: 0.9496 | Val Loss: 0.6689 | Val mIoU: 0.3284 | Val mAcc: 0.4023
+2026-04-10 15:08:47,516 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 15:08:47,516 | INFO | 
+Epoch 7/100
+2026-04-10 15:14:10,435 | INFO | Train Loss: 0.9170 | Val Loss: 0.6035 | Val mIoU: 0.4258 | Val mAcc: 0.5133
+2026-04-10 15:14:10,617 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 15:14:10,617 | INFO | 
+Epoch 8/100
+2026-04-10 15:19:34,341 | INFO | Train Loss: 0.8251 | Val Loss: 0.5651 | Val mIoU: 0.4535 | Val mAcc: 0.5429
+2026-04-10 15:19:34,735 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 15:19:34,736 | INFO | 
+Epoch 9/100
+2026-04-10 15:24:59,571 | INFO | Train Loss: 0.7921 | Val Loss: 0.5119 | Val mIoU: 0.4701 | Val mAcc: 0.5483
+2026-04-10 15:24:59,864 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 15:24:59,864 | INFO | 
+Epoch 10/100
+2026-04-10 15:30:22,948 | INFO | Train Loss: 0.7517 | Val Loss: 0.4880 | Val mIoU: 0.4959 | Val mAcc: 0.5792
+2026-04-10 15:30:23,141 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 15:30:23,141 | INFO | 
+Epoch 11/100
+2026-04-10 15:35:58,679 | INFO | Train Loss: 0.7617 | Val Loss: 0.4665 | Val mIoU: 0.5015 | Val mAcc: 0.5873
+2026-04-10 15:35:58,940 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 15:35:58,941 | INFO | 
+Epoch 12/100
+2026-04-10 15:41:22,843 | INFO | Train Loss: 0.6760 | Val Loss: 0.4607 | Val mIoU: 0.5000 | Val mAcc: 0.5832
+2026-04-10 15:41:22,844 | INFO | No improvement. Patience 1/7
+2026-04-10 15:41:22,844 | INFO | 
+Epoch 13/100
+2026-04-10 15:46:44,721 | INFO | Train Loss: 0.6737 | Val Loss: 0.4384 | Val mIoU: 0.5167 | Val mAcc: 0.6000
+2026-04-10 15:46:45,153 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 15:46:45,153 | INFO | 
+Epoch 14/100
+2026-04-10 15:52:13,332 | INFO | Train Loss: 0.5934 | Val Loss: 0.4384 | Val mIoU: 0.5227 | Val mAcc: 0.6102
+2026-04-10 15:52:13,530 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 15:52:13,530 | INFO | 
+Epoch 15/100
+2026-04-10 15:57:37,716 | INFO | Train Loss: 0.6478 | Val Loss: 0.4356 | Val mIoU: 0.5163 | Val mAcc: 0.5992
+2026-04-10 15:57:37,717 | INFO | No improvement. Patience 1/7
+2026-04-10 15:57:37,717 | INFO | 
+Epoch 16/100
+2026-04-10 16:03:05,280 | INFO | Train Loss: 0.6021 | Val Loss: 0.4248 | Val mIoU: 0.5236 | Val mAcc: 0.6018
+2026-04-10 16:03:06,033 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 16:03:06,033 | INFO | 
+Epoch 17/100
+2026-04-10 16:08:32,171 | INFO | Train Loss: 0.5633 | Val Loss: 0.4300 | Val mIoU: 0.5237 | Val mAcc: 0.6058
+2026-04-10 16:08:32,455 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 16:08:32,455 | INFO | 
+Epoch 18/100
+2026-04-10 16:13:56,156 | INFO | Train Loss: 0.6013 | Val Loss: 0.4069 | Val mIoU: 0.5428 | Val mAcc: 0.6302
+2026-04-10 16:13:56,457 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 16:13:56,457 | INFO | 
+Epoch 19/100
+2026-04-10 16:19:19,682 | INFO | Train Loss: 0.5509 | Val Loss: 0.4017 | Val mIoU: 0.5358 | Val mAcc: 0.6233
+2026-04-10 16:19:19,682 | INFO | No improvement. Patience 1/7
+2026-04-10 16:19:19,682 | INFO | 
+Epoch 20/100
+2026-04-10 16:24:42,258 | INFO | Train Loss: 0.5415 | Val Loss: 0.4140 | Val mIoU: 0.5325 | Val mAcc: 0.6123
+2026-04-10 16:24:42,259 | INFO | No improvement. Patience 2/7
+2026-04-10 16:24:42,260 | INFO | 
+Epoch 21/100
+2026-04-10 16:30:07,557 | INFO | Train Loss: 0.5641 | Val Loss: 0.3961 | Val mIoU: 0.5425 | Val mAcc: 0.6348
+2026-04-10 16:30:07,558 | INFO | No improvement. Patience 3/7
+2026-04-10 16:30:07,558 | INFO | 
+Epoch 22/100
+2026-04-10 16:35:33,998 | INFO | Train Loss: 0.5645 | Val Loss: 0.3989 | Val mIoU: 0.5428 | Val mAcc: 0.6394
+2026-04-10 16:35:34,495 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 16:35:34,495 | INFO | 
+Epoch 23/100
+2026-04-10 16:40:59,753 | INFO | Train Loss: 0.5269 | Val Loss: 0.3895 | Val mIoU: 0.5443 | Val mAcc: 0.6298
+2026-04-10 16:41:02,413 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 16:41:02,414 | INFO | 
+Epoch 24/100
+2026-04-10 16:46:26,029 | INFO | Train Loss: 0.5260 | Val Loss: 0.3902 | Val mIoU: 0.5470 | Val mAcc: 0.6378
+2026-04-10 16:46:26,307 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 16:46:26,308 | INFO | 
+Epoch 25/100
+2026-04-10 16:51:49,374 | INFO | Train Loss: 0.5378 | Val Loss: 0.3820 | Val mIoU: 0.5532 | Val mAcc: 0.6384
+2026-04-10 16:51:49,641 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 16:51:49,641 | INFO | 
+Epoch 26/100
+2026-04-10 16:57:14,642 | INFO | Train Loss: 0.5203 | Val Loss: 0.3807 | Val mIoU: 0.5495 | Val mAcc: 0.6382
+2026-04-10 16:57:14,643 | INFO | No improvement. Patience 1/7
+2026-04-10 16:57:14,643 | INFO | 
+Epoch 27/100
+2026-04-10 17:02:37,323 | INFO | Train Loss: 0.5209 | Val Loss: 0.3837 | Val mIoU: 0.5459 | Val mAcc: 0.6371
+2026-04-10 17:02:37,325 | INFO | No improvement. Patience 2/7
+2026-04-10 17:02:37,325 | INFO | 
+Epoch 28/100
+2026-04-10 17:08:02,854 | INFO | Train Loss: 0.5166 | Val Loss: 0.3806 | Val mIoU: 0.5513 | Val mAcc: 0.6405
+2026-04-10 17:08:02,856 | INFO | No improvement. Patience 3/7
+2026-04-10 17:08:02,856 | INFO | 
+Epoch 29/100
+2026-04-10 17:13:27,773 | INFO | Train Loss: 0.4964 | Val Loss: 0.3829 | Val mIoU: 0.5495 | Val mAcc: 0.6422
+2026-04-10 17:13:27,774 | INFO | No improvement. Patience 4/7
+2026-04-10 17:13:27,774 | INFO | 
+Epoch 30/100
+2026-04-10 17:18:53,977 | INFO | Train Loss: 0.4970 | Val Loss: 0.3851 | Val mIoU: 0.5462 | Val mAcc: 0.6287
+2026-04-10 17:18:53,978 | INFO | No improvement. Patience 5/7
+2026-04-10 17:18:53,978 | INFO | 
+Epoch 31/100
+2026-04-10 17:24:16,921 | INFO | Train Loss: 0.4975 | Val Loss: 0.3684 | Val mIoU: 0.5573 | Val mAcc: 0.6409
+2026-04-10 17:24:17,167 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 17:24:17,168 | INFO | 
+Epoch 32/100
+2026-04-10 17:29:41,544 | INFO | Train Loss: 0.4984 | Val Loss: 0.3839 | Val mIoU: 0.5487 | Val mAcc: 0.6315
+2026-04-10 17:29:41,545 | INFO | No improvement. Patience 1/7
+2026-04-10 17:29:41,546 | INFO | 
+Epoch 33/100
+2026-04-10 17:35:04,739 | INFO | Train Loss: 0.4894 | Val Loss: 0.3725 | Val mIoU: 0.5611 | Val mAcc: 0.6563
+2026-04-10 17:35:05,140 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 17:35:05,140 | INFO | 
+Epoch 34/100
+2026-04-10 17:40:28,347 | INFO | Train Loss: 0.5121 | Val Loss: 0.3713 | Val mIoU: 0.5606 | Val mAcc: 0.6513
+2026-04-10 17:40:28,349 | INFO | No improvement. Patience 1/7
+2026-04-10 17:40:28,349 | INFO | 
+Epoch 35/100
+2026-04-10 17:45:52,899 | INFO | Train Loss: 0.4935 | Val Loss: 0.3693 | Val mIoU: 0.5606 | Val mAcc: 0.6504
+2026-04-10 17:45:52,901 | INFO | No improvement. Patience 2/7
+2026-04-10 17:45:52,901 | INFO | 
+Epoch 36/100
+2026-04-10 17:51:18,603 | INFO | Train Loss: 0.4601 | Val Loss: 0.3626 | Val mIoU: 0.5636 | Val mAcc: 0.6464
+2026-04-10 17:51:18,789 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 17:51:18,789 | INFO | 
+Epoch 37/100
+2026-04-10 17:56:43,067 | INFO | Train Loss: 0.4525 | Val Loss: 0.3675 | Val mIoU: 0.5644 | Val mAcc: 0.6539
+2026-04-10 17:56:43,262 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 17:56:43,263 | INFO | 
+Epoch 38/100
+2026-04-10 18:02:06,142 | INFO | Train Loss: 0.4738 | Val Loss: 0.3656 | Val mIoU: 0.5653 | Val mAcc: 0.6532
+2026-04-10 18:02:06,379 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 18:02:06,379 | INFO | 
+Epoch 39/100
+2026-04-10 18:07:29,804 | INFO | Train Loss: 0.4744 | Val Loss: 0.3634 | Val mIoU: 0.5657 | Val mAcc: 0.6535
+2026-04-10 18:07:29,984 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 18:07:29,984 | INFO | 
+Epoch 40/100
+2026-04-10 18:12:53,078 | INFO | Train Loss: 0.4789 | Val Loss: 0.3599 | Val mIoU: 0.5640 | Val mAcc: 0.6500
+2026-04-10 18:12:53,080 | INFO | No improvement. Patience 1/7
+2026-04-10 18:12:53,081 | INFO | 
+Epoch 41/100
+2026-04-10 18:18:16,512 | INFO | Train Loss: 0.4702 | Val Loss: 0.3570 | Val mIoU: 0.5701 | Val mAcc: 0.6617
+2026-04-10 18:18:16,695 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 18:18:16,695 | INFO | 
+Epoch 42/100
+2026-04-10 18:23:40,869 | INFO | Train Loss: 0.4619 | Val Loss: 0.3539 | Val mIoU: 0.5729 | Val mAcc: 0.6607
+2026-04-10 18:23:41,053 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 18:23:41,053 | INFO | 
+Epoch 43/100
+2026-04-10 18:29:08,429 | INFO | Train Loss: 0.4784 | Val Loss: 0.3554 | Val mIoU: 0.5702 | Val mAcc: 0.6521
+2026-04-10 18:29:08,430 | INFO | No improvement. Patience 1/7
+2026-04-10 18:29:08,430 | INFO | 
+Epoch 44/100
+2026-04-10 18:34:33,155 | INFO | Train Loss: 0.4842 | Val Loss: 0.3620 | Val mIoU: 0.5662 | Val mAcc: 0.6504
+2026-04-10 18:34:33,156 | INFO | No improvement. Patience 2/7
+2026-04-10 18:34:33,156 | INFO | 
+Epoch 45/100
+2026-04-10 18:39:56,950 | INFO | Train Loss: 0.4811 | Val Loss: 0.3582 | Val mIoU: 0.5675 | Val mAcc: 0.6531
+2026-04-10 18:39:56,952 | INFO | No improvement. Patience 3/7
+2026-04-10 18:39:56,952 | INFO | 
+Epoch 46/100
+2026-04-10 18:45:20,792 | INFO | Train Loss: 0.4594 | Val Loss: 0.3539 | Val mIoU: 0.5722 | Val mAcc: 0.6582
+2026-04-10 18:45:20,794 | INFO | No improvement. Patience 4/7
+2026-04-10 18:45:20,794 | INFO | 
+Epoch 47/100
+2026-04-10 18:50:44,439 | INFO | Train Loss: 0.4468 | Val Loss: 0.3566 | Val mIoU: 0.5710 | Val mAcc: 0.6610
+2026-04-10 18:50:44,443 | INFO | No improvement. Patience 5/7
+2026-04-10 18:50:44,443 | INFO | 
+Epoch 48/100
+2026-04-10 18:56:10,835 | INFO | Train Loss: 0.4395 | Val Loss: 0.3593 | Val mIoU: 0.5659 | Val mAcc: 0.6520
+2026-04-10 18:56:10,837 | INFO | No improvement. Patience 6/7
+2026-04-10 18:56:10,837 | INFO | 
+Epoch 49/100
+2026-04-10 19:01:38,104 | INFO | Train Loss: 0.4729 | Val Loss: 0.3539 | Val mIoU: 0.5730 | Val mAcc: 0.6548
+2026-04-10 19:01:38,365 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 19:01:38,365 | INFO | 
+Epoch 50/100
+2026-04-10 19:07:04,553 | INFO | Train Loss: 0.4459 | Val Loss: 0.3489 | Val mIoU: 0.5740 | Val mAcc: 0.6580
+2026-04-10 19:07:04,745 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 19:07:04,745 | INFO | 
+Epoch 51/100
+2026-04-10 19:12:30,637 | INFO | Train Loss: 0.4279 | Val Loss: 0.3517 | Val mIoU: 0.5748 | Val mAcc: 0.6679
+2026-04-10 19:12:30,815 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 19:12:30,815 | INFO | 
+Epoch 52/100
+2026-04-10 19:17:56,568 | INFO | Train Loss: 0.4421 | Val Loss: 0.3490 | Val mIoU: 0.5745 | Val mAcc: 0.6605
+2026-04-10 19:17:56,570 | INFO | No improvement. Patience 1/7
+2026-04-10 19:17:56,570 | INFO | 
+Epoch 53/100
+2026-04-10 19:23:20,963 | INFO | Train Loss: 0.4259 | Val Loss: 0.3503 | Val mIoU: 0.5722 | Val mAcc: 0.6588
+2026-04-10 19:23:20,964 | INFO | No improvement. Patience 2/7
+2026-04-10 19:23:20,964 | INFO | 
+Epoch 54/100
+2026-04-10 19:28:42,661 | INFO | Train Loss: 0.4174 | Val Loss: 0.3502 | Val mIoU: 0.5738 | Val mAcc: 0.6575
+2026-04-10 19:28:42,662 | INFO | No improvement. Patience 3/7
+2026-04-10 19:28:42,662 | INFO | 
+Epoch 55/100
+2026-04-10 19:34:07,840 | INFO | Train Loss: 0.4299 | Val Loss: 0.3489 | Val mIoU: 0.5772 | Val mAcc: 0.6662
+2026-04-10 19:34:08,033 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 19:34:08,033 | INFO | 
+Epoch 56/100
+2026-04-10 19:39:34,538 | INFO | Train Loss: 0.4181 | Val Loss: 0.3473 | Val mIoU: 0.5779 | Val mAcc: 0.6625
+2026-04-10 19:39:34,719 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 19:39:34,719 | INFO | 
+Epoch 57/100
+2026-04-10 19:44:58,806 | INFO | Train Loss: 0.4212 | Val Loss: 0.3486 | Val mIoU: 0.5760 | Val mAcc: 0.6616
+2026-04-10 19:44:58,807 | INFO | No improvement. Patience 1/7
+2026-04-10 19:44:58,807 | INFO | 
+Epoch 58/100
+2026-04-10 19:50:26,054 | INFO | Train Loss: 0.4291 | Val Loss: 0.3466 | Val mIoU: 0.5776 | Val mAcc: 0.6650
+2026-04-10 19:50:26,055 | INFO | No improvement. Patience 2/7
+2026-04-10 19:50:26,055 | INFO | 
+Epoch 59/100
+2026-04-10 19:55:50,716 | INFO | Train Loss: 0.4306 | Val Loss: 0.3440 | Val mIoU: 0.5782 | Val mAcc: 0.6643
+2026-04-10 19:55:50,910 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 19:55:50,911 | INFO | 
+Epoch 60/100
+2026-04-10 20:01:16,140 | INFO | Train Loss: 0.4251 | Val Loss: 0.3448 | Val mIoU: 0.5768 | Val mAcc: 0.6606
+2026-04-10 20:01:16,142 | INFO | No improvement. Patience 1/7
+2026-04-10 20:01:16,142 | INFO | 
+Epoch 61/100
+2026-04-10 20:06:39,847 | INFO | Train Loss: 0.4338 | Val Loss: 0.3420 | Val mIoU: 0.5788 | Val mAcc: 0.6639
+2026-04-10 20:06:40,033 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 20:06:40,033 | INFO | 
+Epoch 62/100
+2026-04-10 20:12:05,019 | INFO | Train Loss: 0.4193 | Val Loss: 0.3424 | Val mIoU: 0.5781 | Val mAcc: 0.6638
+2026-04-10 20:12:05,021 | INFO | No improvement. Patience 1/7
+2026-04-10 20:12:05,021 | INFO | 
+Epoch 63/100
+2026-04-10 20:17:27,888 | INFO | Train Loss: 0.4153 | Val Loss: 0.3414 | Val mIoU: 0.5796 | Val mAcc: 0.6644
+2026-04-10 20:17:28,067 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 20:17:28,067 | INFO | 
+Epoch 64/100
+2026-04-10 20:22:54,188 | INFO | Train Loss: 0.3981 | Val Loss: 0.3476 | Val mIoU: 0.5758 | Val mAcc: 0.6562
+2026-04-10 20:22:54,188 | INFO | No improvement. Patience 1/7
+2026-04-10 20:22:54,188 | INFO | 
+Epoch 65/100
+2026-04-10 20:28:20,991 | INFO | Train Loss: 0.4230 | Val Loss: 0.3450 | Val mIoU: 0.5801 | Val mAcc: 0.6618
+2026-04-10 20:28:21,168 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 20:28:21,168 | INFO | 
+Epoch 66/100
+2026-04-10 20:33:44,800 | INFO | Train Loss: 0.4001 | Val Loss: 0.3379 | Val mIoU: 0.5815 | Val mAcc: 0.6676
+2026-04-10 20:33:44,982 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 20:33:44,982 | INFO | 
+Epoch 67/100
+2026-04-10 20:39:08,341 | INFO | Train Loss: 0.4174 | Val Loss: 0.3384 | Val mIoU: 0.5842 | Val mAcc: 0.6724
+2026-04-10 20:39:08,532 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_4_best.pth
+2026-04-10 20:39:08,532 | INFO | 
+Epoch 68/100
+2026-04-10 20:44:31,980 | INFO | Train Loss: 0.4076 | Val Loss: 0.3369 | Val mIoU: 0.5839 | Val mAcc: 0.6681
+2026-04-10 20:44:31,980 | INFO | No improvement. Patience 1/7
+2026-04-10 20:44:31,981 | INFO | 
+Epoch 69/100
+2026-04-10 20:49:59,809 | INFO | Train Loss: 0.4189 | Val Loss: 0.3422 | Val mIoU: 0.5817 | Val mAcc: 0.6698
+2026-04-10 20:49:59,810 | INFO | No improvement. Patience 2/7
+2026-04-10 20:49:59,810 | INFO | 
+Epoch 70/100
+2026-04-10 20:55:26,746 | INFO | Train Loss: 0.4150 | Val Loss: 0.3411 | Val mIoU: 0.5785 | Val mAcc: 0.6608
+2026-04-10 20:55:26,747 | INFO | No improvement. Patience 3/7
+2026-04-10 20:55:26,747 | INFO | 
+Epoch 71/100
+2026-04-10 21:00:51,460 | INFO | Train Loss: 0.4076 | Val Loss: 0.3379 | Val mIoU: 0.5831 | Val mAcc: 0.6720
+2026-04-10 21:00:51,460 | INFO | No improvement. Patience 4/7
+2026-04-10 21:00:51,461 | INFO | 
+Epoch 72/100
+2026-04-10 21:06:15,048 | INFO | Train Loss: 0.4365 | Val Loss: 0.3395 | Val mIoU: 0.5816 | Val mAcc: 0.6664
+2026-04-10 21:06:15,049 | INFO | No improvement. Patience 5/7
+2026-04-10 21:06:15,049 | INFO | 
+Epoch 73/100
+2026-04-10 21:11:38,480 | INFO | Train Loss: 0.4093 | Val Loss: 0.3380 | Val mIoU: 0.5824 | Val mAcc: 0.6657
+2026-04-10 21:11:38,481 | INFO | No improvement. Patience 6/7
+2026-04-10 21:11:38,481 | INFO | 
+Epoch 74/100
+2026-04-10 21:17:04,221 | INFO | Train Loss: 0.4136 | Val Loss: 0.3379 | Val mIoU: 0.5824 | Val mAcc: 0.6675
+2026-04-10 21:17:04,222 | INFO | No improvement. Patience 7/7
+2026-04-10 21:17:04,222 | INFO | Early stopping.
+2026-04-10 21:17:04,626 | INFO | ✓ Loss curves saved to /mnt/primary/image-segmentation-training/results/fold_4_curves.png
+2026-04-10 21:17:04,626 | INFO | ✓ History CSV saved to /mnt/primary/image-segmentation-training/results/fold_4_history.csv
+2026-04-10 21:17:04,626 | INFO | 
+Best epoch: 67 | Best mIoU: 0.5842
+2026-04-10 21:17:04,835 | INFO | 
+=======================================================
+2026-04-10 21:17:04,835 | INFO |   Fold 5 / 5  —  train: 643  val: 160
+2026-04-10 21:17:04,836 | INFO | =======================================================
+2026-04-10 21:17:05,157 | INFO | 
+Epoch 1/100
+2026-04-10 21:22:31,291 | INFO | Train Loss: 1.9258 | Val Loss: 1.8278 | Val mIoU: 0.1161 | Val mAcc: 0.2048
+2026-04-10 21:22:31,480 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 21:22:31,480 | INFO | 
+Epoch 2/100
+2026-04-10 21:27:54,002 | INFO | Train Loss: 1.7312 | Val Loss: 1.5067 | Val mIoU: 0.2068 | Val mAcc: 0.2717
+2026-04-10 21:27:54,183 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 21:27:54,184 | INFO | 
+Epoch 3/100
+2026-04-10 21:33:21,564 | INFO | Train Loss: 1.4447 | Val Loss: 1.1459 | Val mIoU: 0.2053 | Val mAcc: 0.2741
+2026-04-10 21:33:21,565 | INFO | No improvement. Patience 1/7
+2026-04-10 21:33:21,565 | INFO | 
+Epoch 4/100
+2026-04-10 21:38:48,906 | INFO | Train Loss: 1.2202 | Val Loss: 0.9515 | Val mIoU: 0.2416 | Val mAcc: 0.3230
+2026-04-10 21:38:49,086 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 21:38:49,088 | INFO | 
+Epoch 5/100
+2026-04-10 21:44:12,372 | INFO | Train Loss: 1.0410 | Val Loss: 0.8420 | Val mIoU: 0.2749 | Val mAcc: 0.3775
+2026-04-10 21:44:12,550 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 21:44:12,550 | INFO | 
+Epoch 6/100
+2026-04-10 21:49:37,063 | INFO | Train Loss: 0.9825 | Val Loss: 0.7308 | Val mIoU: 0.3295 | Val mAcc: 0.4306
+2026-04-10 21:49:37,249 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 21:49:37,249 | INFO | 
+Epoch 7/100
+2026-04-10 21:55:02,108 | INFO | Train Loss: 0.8598 | Val Loss: 0.6575 | Val mIoU: 0.3727 | Val mAcc: 0.4586
+2026-04-10 21:55:02,291 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 21:55:02,291 | INFO | 
+Epoch 8/100
+2026-04-10 22:00:26,855 | INFO | Train Loss: 0.8016 | Val Loss: 0.5975 | Val mIoU: 0.4072 | Val mAcc: 0.4916
+2026-04-10 22:00:27,041 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 22:00:27,041 | INFO | 
+Epoch 9/100
+2026-04-10 22:05:50,050 | INFO | Train Loss: 0.8186 | Val Loss: 0.5594 | Val mIoU: 0.4549 | Val mAcc: 0.5502
+2026-04-10 22:05:50,228 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 22:05:50,228 | INFO | 
+Epoch 10/100
+2026-04-10 22:11:21,181 | INFO | Train Loss: 0.7184 | Val Loss: 0.5326 | Val mIoU: 0.4668 | Val mAcc: 0.5635
+2026-04-10 22:11:21,361 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 22:11:21,362 | INFO | 
+Epoch 11/100
+2026-04-10 22:16:47,730 | INFO | Train Loss: 0.6751 | Val Loss: 0.5206 | Val mIoU: 0.4685 | Val mAcc: 0.5538
+2026-04-10 22:16:47,922 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 22:16:47,922 | INFO | 
+Epoch 12/100
+2026-04-10 22:22:11,868 | INFO | Train Loss: 0.6667 | Val Loss: 0.5023 | Val mIoU: 0.4744 | Val mAcc: 0.5632
+2026-04-10 22:22:12,050 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 22:22:12,050 | INFO | 
+Epoch 13/100
+2026-04-10 22:27:35,365 | INFO | Train Loss: 0.6164 | Val Loss: 0.5042 | Val mIoU: 0.4861 | Val mAcc: 0.5786
+2026-04-10 22:27:35,587 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 22:27:35,587 | INFO | 
+Epoch 14/100
+2026-04-10 22:33:02,939 | INFO | Train Loss: 0.6504 | Val Loss: 0.4771 | Val mIoU: 0.4938 | Val mAcc: 0.5972
+2026-04-10 22:33:03,122 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 22:33:03,122 | INFO | 
+Epoch 15/100
+2026-04-10 22:38:27,367 | INFO | Train Loss: 0.6281 | Val Loss: 0.4715 | Val mIoU: 0.4992 | Val mAcc: 0.6036
+2026-04-10 22:38:27,577 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 22:38:27,577 | INFO | 
+Epoch 16/100
+2026-04-10 22:43:51,931 | INFO | Train Loss: 0.5888 | Val Loss: 0.4813 | Val mIoU: 0.5041 | Val mAcc: 0.6214
+2026-04-10 22:43:52,123 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 22:43:52,123 | INFO | 
+Epoch 17/100
+2026-04-10 22:49:16,835 | INFO | Train Loss: 0.5769 | Val Loss: 0.4449 | Val mIoU: 0.5142 | Val mAcc: 0.6150
+2026-04-10 22:49:17,018 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 22:49:17,018 | INFO | 
+Epoch 18/100
+2026-04-10 22:54:41,584 | INFO | Train Loss: 0.5499 | Val Loss: 0.4457 | Val mIoU: 0.5097 | Val mAcc: 0.6102
+2026-04-10 22:54:41,584 | INFO | No improvement. Patience 1/7
+2026-04-10 22:54:41,585 | INFO | 
+Epoch 19/100
+2026-04-10 23:00:05,295 | INFO | Train Loss: 0.5300 | Val Loss: 0.4423 | Val mIoU: 0.5225 | Val mAcc: 0.6336
+2026-04-10 23:00:05,485 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 23:00:05,485 | INFO | 
+Epoch 20/100
+2026-04-10 23:05:28,095 | INFO | Train Loss: 0.5236 | Val Loss: 0.4442 | Val mIoU: 0.5148 | Val mAcc: 0.6134
+2026-04-10 23:05:28,096 | INFO | No improvement. Patience 1/7
+2026-04-10 23:05:28,096 | INFO | 
+Epoch 21/100
+2026-04-10 23:10:51,152 | INFO | Train Loss: 0.5714 | Val Loss: 0.4262 | Val mIoU: 0.5226 | Val mAcc: 0.6189
+2026-04-10 23:10:51,330 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 23:10:51,330 | INFO | 
+Epoch 22/100
+2026-04-10 23:16:20,648 | INFO | Train Loss: 0.5249 | Val Loss: 0.4386 | Val mIoU: 0.5114 | Val mAcc: 0.6177
+2026-04-10 23:16:20,650 | INFO | No improvement. Patience 1/7
+2026-04-10 23:16:20,650 | INFO | 
+Epoch 23/100
+2026-04-10 23:21:45,791 | INFO | Train Loss: 0.5046 | Val Loss: 0.4155 | Val mIoU: 0.5282 | Val mAcc: 0.6273
+2026-04-10 23:21:45,975 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 23:21:45,975 | INFO | 
+Epoch 24/100
+2026-04-10 23:27:09,108 | INFO | Train Loss: 0.4959 | Val Loss: 0.4128 | Val mIoU: 0.5318 | Val mAcc: 0.6314
+2026-04-10 23:27:09,292 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 23:27:09,292 | INFO | 
+Epoch 25/100
+2026-04-10 23:32:33,201 | INFO | Train Loss: 0.4975 | Val Loss: 0.4161 | Val mIoU: 0.5363 | Val mAcc: 0.6439
+2026-04-10 23:32:33,383 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 23:32:33,384 | INFO | 
+Epoch 26/100
+2026-04-10 23:37:56,668 | INFO | Train Loss: 0.5491 | Val Loss: 0.4131 | Val mIoU: 0.5374 | Val mAcc: 0.6444
+2026-04-10 23:37:56,886 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 23:37:56,886 | INFO | 
+Epoch 27/100
+2026-04-10 23:43:25,531 | INFO | Train Loss: 0.5057 | Val Loss: 0.4115 | Val mIoU: 0.5315 | Val mAcc: 0.6379
+2026-04-10 23:43:25,532 | INFO | No improvement. Patience 1/7
+2026-04-10 23:43:25,532 | INFO | 
+Epoch 28/100
+2026-04-10 23:48:53,622 | INFO | Train Loss: 0.4775 | Val Loss: 0.4048 | Val mIoU: 0.5352 | Val mAcc: 0.6348
+2026-04-10 23:48:53,623 | INFO | No improvement. Patience 2/7
+2026-04-10 23:48:53,623 | INFO | 
+Epoch 29/100
+2026-04-10 23:54:18,456 | INFO | Train Loss: 0.4872 | Val Loss: 0.4089 | Val mIoU: 0.5394 | Val mAcc: 0.6493
+2026-04-10 23:54:18,637 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 23:54:18,638 | INFO | 
+Epoch 30/100
+2026-04-10 23:59:43,336 | INFO | Train Loss: 0.4861 | Val Loss: 0.4036 | Val mIoU: 0.5438 | Val mAcc: 0.6489
+2026-04-10 23:59:43,541 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-10 23:59:43,541 | INFO | 
+Epoch 31/100
+2026-04-11 00:05:11,171 | INFO | Train Loss: 0.5142 | Val Loss: 0.4016 | Val mIoU: 0.5408 | Val mAcc: 0.6444
+2026-04-11 00:05:11,173 | INFO | No improvement. Patience 1/7
+2026-04-11 00:05:11,173 | INFO | 
+Epoch 32/100
+2026-04-11 00:10:34,658 | INFO | Train Loss: 0.5139 | Val Loss: 0.3947 | Val mIoU: 0.5539 | Val mAcc: 0.6539
+2026-04-11 00:10:34,837 | INFO | ✓ Saved best model to /mnt/primary/image-segmentation-training/results/fold_5_best.pth
+2026-04-11 00:10:34,837 | INFO | 
+Epoch 33/100
+2026-04-11 00:16:00,159 | INFO | Train Loss: 0.4723 | Val Loss: 0.3936 | Val mIoU: 0.5472 | Val mAcc: 0.6518
+2026-04-11 00:16:00,160 | INFO | No improvement. Patience 1/7
+2026-04-11 00:16:00,160 | INFO | 
+Epoch 34/100
+2026-04-11 00:21:25,249 | INFO | Train Loss: 0.4896 | Val Loss: 0.3921 | Val mIoU: 0.5421 | Val mAcc: 0.6437
+2026-04-11 00:21:25,250 | INFO | No improvement. Patience 2/7
+2026-04-11 00:21:25,250 | INFO | 
+Epoch 35/100
+2026-04-11 00:26:48,667 | INFO | Train Loss: 0.4814 | Val Loss: 0.3856 | Val mIoU: 0.5490 | Val mAcc: 0.6462
+2026-04-11 00:26:48,668 | INFO | No improvement. Patience 3/7
+2026-04-11 00:26:48,668 | INFO | 
+Epoch 36/100
+2026-04-11 00:32:13,681 | INFO | Train Loss: 0.4642 | Val Loss: 0.3887 | Val mIoU: 0.5437 | Val mAcc: 0.6433
+2026-04-11 00:32:13,682 | INFO | No improvement. Patience 4/7
+2026-04-11 00:32:13,682 | INFO | 
+Epoch 37/100
+2026-04-11 00:37:39,588 | INFO | Train Loss: 0.4775 | Val Loss: 0.3911 | Val mIoU: 0.5460 | Val mAcc: 0.6421
+2026-04-11 00:37:39,590 | INFO | No improvement. Patience 5/7
+2026-04-11 00:37:39,590 | INFO | 
+Epoch 38/100
+2026-04-11 00:43:03,439 | INFO | Train Loss: 0.4322 | Val Loss: 0.3896 | Val mIoU: 0.5469 | Val mAcc: 0.6464
+2026-04-11 00:43:03,441 | INFO | No improvement. Patience 6/7
+2026-04-11 00:43:03,441 | INFO | 
+Epoch 39/100
+2026-04-11 00:48:27,282 | INFO | Train Loss: 0.4513 | Val Loss: 0.3840 | Val mIoU: 0.5533 | Val mAcc: 0.6533
+2026-04-11 00:48:27,283 | INFO | No improvement. Patience 7/7
+2026-04-11 00:48:27,284 | INFO | Early stopping.
+2026-04-11 00:48:27,703 | INFO | ✓ Loss curves saved to /mnt/primary/image-segmentation-training/results/fold_5_curves.png
+2026-04-11 00:48:27,703 | INFO | ✓ History CSV saved to /mnt/primary/image-segmentation-training/results/fold_5_history.csv
+2026-04-11 00:48:27,703 | INFO | 
+Best epoch: 32 | Best mIoU: 0.5539
+2026-04-11 00:48:27,918 | INFO | 
+=======================================================
+2026-04-11 00:48:27,918 | INFO | K-Fold Cross Validation Summary
+2026-04-11 00:48:27,918 | INFO | =======================================================
+2026-07-09 17:12:11,521 | INFO | DATA_PATH: /mnt/primary/image-segmentation-training/dataset
+2026-07-09 17:12:11,521 | INFO | RESULTS_ROOT: /mnt/primary/image-segmentation-training/results
+2026-07-09 17:12:11,521 | INFO | LOG_PATH: /mnt/primary/image-segmentation-training/results/train_model_no_synthesiser.log
+2026-07-09 17:12:11,530 | INFO | Dataset structure:
+2026-07-09 17:12:11,531 | INFO |   train/  — 803 sat images, 803 masks
+2026-07-09 17:12:11,531 | INFO |   valid/  — 171 sat images (no masks, inference only)
+2026-07-09 17:12:11,531 | INFO |   test/   — 172 sat images (no masks, inference only)
+2026-07-09 17:12:11,533 | INFO | Total labeled samples: 803
+2026-07-09 17:12:11,911 | INFO | 
+=======================================================
+2026-07-09 17:12:11,911 | INFO |   Fold 1 / 5  —  train: 642  val: 161
+2026-07-09 17:12:11,911 | INFO | =======================================================
+2026-07-09 17:14:37,308 | INFO | DATA_PATH: /mnt/primary/image-segmentation-training/dataset
+2026-07-09 17:14:37,308 | INFO | RESULTS_ROOT: /mnt/primary/image-segmentation-training/results
+2026-07-09 17:14:37,308 | INFO | LOG_PATH: /mnt/primary/image-segmentation-training/results/train_model_no_synthesiser.log
+2026-07-09 17:14:37,317 | INFO | Dataset structure:
+2026-07-09 17:14:37,317 | INFO |   train/  — 803 sat images, 803 masks
+2026-07-09 17:14:37,317 | INFO |   valid/  — 171 sat images (no masks, inference only)
+2026-07-09 17:14:37,317 | INFO |   test/   — 172 sat images (no masks, inference only)
+2026-07-09 17:14:37,319 | INFO | Total labeled samples: 803
+2026-07-09 17:14:37,566 | INFO | 
+=======================================================
+2026-07-09 17:14:37,566 | INFO |   Fold 1 / 5  —  train: 642  val: 161
+2026-07-09 17:14:37,566 | INFO | =======================================================
+2026-07-09 19:26:16,126 | INFO | ✓ Loss curves saved to /mnt/primary/image-segmentation-training/results/fold_1_curves.png
+2026-07-09 19:26:16,127 | INFO | ✓ History CSV saved to /mnt/primary/image-segmentation-training/results/fold_1_history.csv
+2026-07-09 19:26:16,127 | INFO | 
+Best epoch: 52 | Best mIoU: 0.5721
+2026-07-09 19:26:16,236 | INFO | 
+=======================================================
+2026-07-09 19:26:16,236 | INFO |   Fold 2 / 5  —  train: 642  val: 161
+2026-07-09 19:26:16,236 | INFO | =======================================================
+2026-07-09 21:10:11,330 | INFO | ✓ Loss curves saved to /mnt/primary/image-segmentation-training/results/fold_2_curves.png
+2026-07-09 21:10:11,332 | INFO | ✓ History CSV saved to /mnt/primary/image-segmentation-training/results/fold_2_history.csv
+2026-07-09 21:10:11,332 | INFO | 
+Best epoch: 40 | Best mIoU: 0.6008
+2026-07-09 21:10:11,448 | INFO | 
+=======================================================
+2026-07-09 21:10:11,448 | INFO |   Fold 3 / 5  —  train: 642  val: 161
+2026-07-09 21:10:11,448 | INFO | =======================================================
+2026-07-09 22:43:39,462 | INFO | ✓ Loss curves saved to /mnt/primary/image-segmentation-training/results/fold_3_curves.png
+2026-07-09 22:43:39,463 | INFO | ✓ History CSV saved to /mnt/primary/image-segmentation-training/results/fold_3_history.csv
+2026-07-09 22:43:39,463 | INFO | 
+Best epoch: 35 | Best mIoU: 0.6018
+2026-07-09 22:43:39,578 | INFO | 
+=======================================================
+2026-07-09 22:43:39,578 | INFO |   Fold 4 / 5  —  train: 643  val: 160
+2026-07-09 22:43:39,578 | INFO | =======================================================
+2026-07-10 00:50:11,410 | INFO | ✓ Loss curves saved to /mnt/primary/image-segmentation-training/results/fold_4_curves.png
+2026-07-10 00:50:11,412 | INFO | ✓ History CSV saved to /mnt/primary/image-segmentation-training/results/fold_4_history.csv
+2026-07-10 00:50:11,412 | INFO | 
+Best epoch: 49 | Best mIoU: 0.5780
+2026-07-10 00:50:11,521 | INFO | 
+=======================================================
+2026-07-10 00:50:11,521 | INFO |   Fold 5 / 5  —  train: 643  val: 160
+2026-07-10 00:50:11,521 | INFO | =======================================================
+2026-07-10 02:47:35,758 | INFO | ✓ Loss curves saved to /mnt/primary/image-segmentation-training/results/fold_5_curves.png
+2026-07-10 02:47:35,759 | INFO | ✓ History CSV saved to /mnt/primary/image-segmentation-training/results/fold_5_history.csv
+2026-07-10 02:47:35,759 | INFO | 
+Best epoch: 45 | Best mIoU: 0.5601
+2026-07-10 02:47:35,870 | INFO | 
+=======================================================
+2026-07-10 02:47:35,870 | INFO | K-Fold Cross Validation Summary
+2026-07-10 02:47:35,870 | INFO | =======================================================
+2026-07-10 02:47:35,872 | INFO | 
+      best_epoch  mean_iou  mean_accuracy  urban_land  agriculture_land  rangeland  forest_land     water  barren_land  unknown
+1       52.00000  0.572100       0.664800    0.728800          0.855600   0.370400     0.766300  0.650100     0.633700      0.0
+2       40.00000  0.600800       0.693200    0.758600          0.849700   0.359900     0.770100  0.761200     0.705900      0.0
+3       35.00000  0.601800       0.687000    0.752300          0.873100   0.391200     0.789200  0.783500     0.623300      0.0
+4       49.00000  0.578000       0.668900    0.759700          0.871100   0.310500     0.782200  0.706300     0.616200      0.0
+5       45.00000  0.560100       0.659400    0.741100          0.855000   0.377600     0.715700  0.531100     0.699900      0.0
+mean    44.20000  0.582560       0.674660    0.748100          0.860900   0.361920     0.764700  0.686440     0.655800      0.0
+std      6.83374  0.018286       0.014657    0.013076          0.010503   0.030916     0.028893  0.101063     0.043496      0.0
+2026-07-10 02:47:35,872 | INFO | 
+mIoU:       0.5826 ± 0.0183
+2026-07-10 02:47:35,873 | INFO | mAcc:       0.6747 ± 0.0147
+2026-07-10 02:47:35,873 | INFO | Best epoch: [52, 40, 35, 49, 45] → recommended for final run: 44
+2026-07-10 02:47:35,896 | INFO | 
+✓ Summary saved to /mnt/primary/image-segmentation-training/results/kfold_summary.csv
+2026-07-10 02:47:35,896 | INFO | Training final model for 44 epochs (mean best epoch across folds)
+2026-07-10 02:49:16,794 | INFO | Epoch 1/44 | Train Loss: 1.8638
+2026-07-10 02:50:57,554 | INFO | Epoch 2/44 | Train Loss: 1.4363
+2026-07-10 02:52:38,695 | INFO | Epoch 3/44 | Train Loss: 1.0551
+2026-07-10 02:54:19,571 | INFO | Epoch 4/44 | Train Loss: 0.8830
+2026-07-10 02:55:59,093 | INFO | Epoch 5/44 | Train Loss: 0.8590
+2026-07-10 02:57:37,458 | INFO | Epoch 6/44 | Train Loss: 0.8112
+2026-07-10 02:59:15,743 | INFO | Epoch 7/44 | Train Loss: 0.7219
+2026-07-10 03:00:54,226 | INFO | Epoch 8/44 | Train Loss: 0.6508
+2026-07-10 03:02:34,061 | INFO | Epoch 9/44 | Train Loss: 0.6268
+2026-07-10 03:04:12,092 | INFO | Epoch 10/44 | Train Loss: 0.5961
+2026-07-10 03:05:50,726 | INFO | Epoch 11/44 | Train Loss: 0.6294
+2026-07-10 03:07:30,145 | INFO | Epoch 12/44 | Train Loss: 0.6012
+2026-07-10 03:09:08,515 | INFO | Epoch 13/44 | Train Loss: 0.5661
+2026-07-10 03:10:47,120 | INFO | Epoch 14/44 | Train Loss: 0.5602
+2026-07-10 03:12:26,159 | INFO | Epoch 15/44 | Train Loss: 0.5545
+2026-07-10 03:14:04,832 | INFO | Epoch 16/44 | Train Loss: 0.5075
+2026-07-10 03:15:43,341 | INFO | Epoch 17/44 | Train Loss: 0.5162
+2026-07-10 03:17:21,824 | INFO | Epoch 18/44 | Train Loss: 0.5054
+2026-07-10 03:19:00,196 | INFO | Epoch 19/44 | Train Loss: 0.5245
+2026-07-10 03:20:38,501 | INFO | Epoch 20/44 | Train Loss: 0.5191
+2026-07-10 03:22:16,781 | INFO | Epoch 21/44 | Train Loss: 0.5089
+2026-07-10 03:23:54,900 | INFO | Epoch 22/44 | Train Loss: 0.4960
+2026-07-10 03:25:33,889 | INFO | Epoch 23/44 | Train Loss: 0.5124
+2026-07-10 03:27:13,304 | INFO | Epoch 24/44 | Train Loss: 0.5009
+2026-07-10 03:28:52,705 | INFO | Epoch 25/44 | Train Loss: 0.5052
+2026-07-10 03:30:32,187 | INFO | Epoch 26/44 | Train Loss: 0.4711
+2026-07-10 03:32:11,189 | INFO | Epoch 27/44 | Train Loss: 0.4737
+2026-07-10 03:33:50,730 | INFO | Epoch 28/44 | Train Loss: 0.4978
+2026-07-10 03:35:30,103 | INFO | Epoch 29/44 | Train Loss: 0.4793
+2026-07-10 03:37:09,956 | INFO | Epoch 30/44 | Train Loss: 0.4876
+2026-07-10 03:38:49,933 | INFO | Epoch 31/44 | Train Loss: 0.4730
+2026-07-10 03:40:31,324 | INFO | Epoch 32/44 | Train Loss: 0.4844
+2026-07-10 03:42:11,249 | INFO | Epoch 33/44 | Train Loss: 0.4993
+2026-07-10 03:43:51,710 | INFO | Epoch 34/44 | Train Loss: 0.4884
+2026-07-10 03:45:31,418 | INFO | Epoch 35/44 | Train Loss: 0.4709
+2026-07-10 03:47:11,042 | INFO | Epoch 36/44 | Train Loss: 0.4805
+2026-07-10 03:48:50,660 | INFO | Epoch 37/44 | Train Loss: 0.5383
+2026-07-10 03:50:29,944 | INFO | Epoch 38/44 | Train Loss: 0.5100
+2026-07-10 03:52:08,749 | INFO | Epoch 39/44 | Train Loss: 0.4779
+2026-07-10 03:53:47,650 | INFO | Epoch 40/44 | Train Loss: 0.4566
+2026-07-10 03:55:26,352 | INFO | Epoch 41/44 | Train Loss: 0.4550
+2026-07-10 03:57:05,834 | INFO | Epoch 42/44 | Train Loss: 0.4811
+2026-07-10 03:58:44,652 | INFO | Epoch 43/44 | Train Loss: 0.4733
+2026-07-10 04:00:33,150 | INFO | Epoch 44/44 | Train Loss: 0.4495
+2026-07-10 04:00:33,323 | INFO | 
+✓ Final model saved to /mnt/primary/image-segmentation-training/results/final_segformer_b0_7class.pth
+2026-07-10 04:00:33,441 | INFO | ✓ Final loss curve saved to /mnt/primary/image-segmentation-training/results/final_curves.png
+2026-07-10 04:02:13,620 | INFO | Epoch 1/100 | Train Loss: 1.9194
+2026-07-10 04:03:52,294 | INFO | Epoch 2/100 | Train Loss: 1.6830
+2026-07-10 04:05:30,907 | INFO | Epoch 3/100 | Train Loss: 1.3560
+2026-07-10 04:07:09,871 | INFO | Epoch 4/100 | Train Loss: 1.1286
+2026-07-10 04:08:49,265 | INFO | Epoch 5/100 | Train Loss: 0.9919
+2026-07-10 04:10:28,980 | INFO | Epoch 6/100 | Train Loss: 0.9391
+2026-07-10 04:12:10,465 | INFO | Epoch 7/100 | Train Loss: 0.8316
+2026-07-10 04:13:52,046 | INFO | Epoch 8/100 | Train Loss: 0.7569
+2026-07-10 04:15:32,362 | INFO | Epoch 9/100 | Train Loss: 0.6954
+2026-07-10 04:17:12,372 | INFO | Epoch 10/100 | Train Loss: 0.6945
+2026-07-10 04:18:52,384 | INFO | Epoch 11/100 | Train Loss: 0.6861
+2026-07-10 04:20:31,664 | INFO | Epoch 12/100 | Train Loss: 0.6265
+2026-07-10 04:22:10,949 | INFO | Epoch 13/100 | Train Loss: 0.6048
+2026-07-10 04:23:50,003 | INFO | Epoch 14/100 | Train Loss: 0.5493
+2026-07-10 04:25:29,129 | INFO | Epoch 15/100 | Train Loss: 0.5743
+2026-07-10 04:27:08,112 | INFO | Epoch 16/100 | Train Loss: 0.5498
+2026-07-10 04:28:48,721 | INFO | Epoch 17/100 | Train Loss: 0.5330
+2026-07-10 04:30:28,236 | INFO | Epoch 18/100 | Train Loss: 0.5614
+2026-07-10 04:32:07,289 | INFO | Epoch 19/100 | Train Loss: 0.5498
+2026-07-10 04:33:46,571 | INFO | Epoch 20/100 | Train Loss: 0.5419
+2026-07-10 04:35:25,137 | INFO | Epoch 21/100 | Train Loss: 0.5594
+2026-07-10 04:37:04,059 | INFO | Epoch 22/100 | Train Loss: 0.5292
+2026-07-10 04:38:43,203 | INFO | Epoch 23/100 | Train Loss: 0.5145
+2026-07-10 04:40:22,059 | INFO | Epoch 24/100 | Train Loss: 0.4851
+2026-07-10 04:42:01,345 | INFO | Epoch 25/100 | Train Loss: 0.4831
+2026-07-10 04:43:40,792 | INFO | Epoch 26/100 | Train Loss: 0.4786
+2026-07-10 04:45:20,759 | INFO | Epoch 27/100 | Train Loss: 0.4789
+2026-07-10 04:46:59,603 | INFO | Epoch 28/100 | Train Loss: 0.4786
+2026-07-10 04:48:38,795 | INFO | Epoch 29/100 | Train Loss: 0.5129
+2026-07-10 04:50:17,786 | INFO | Epoch 30/100 | Train Loss: 0.4546
+2026-07-10 04:51:56,743 | INFO | Epoch 31/100 | Train Loss: 0.4628
+2026-07-10 04:53:35,339 | INFO | Epoch 32/100 | Train Loss: 0.4817
+2026-07-10 04:55:14,540 | INFO | Epoch 33/100 | Train Loss: 0.4567
+2026-07-10 04:56:53,453 | INFO | Epoch 34/100 | Train Loss: 0.4552
+2026-07-10 04:58:32,177 | INFO | Epoch 35/100 | Train Loss: 0.4281
+2026-07-10 05:00:12,651 | INFO | Epoch 36/100 | Train Loss: 0.4634
+2026-07-10 05:01:51,185 | INFO | Epoch 37/100 | Train Loss: 0.4444
+2026-07-10 05:03:29,829 | INFO | Epoch 38/100 | Train Loss: 0.4709
+2026-07-10 05:05:08,074 | INFO | Epoch 39/100 | Train Loss: 0.4182
+2026-07-10 05:06:46,333 | INFO | Epoch 40/100 | Train Loss: 0.4407
+2026-07-10 05:08:25,419 | INFO | Epoch 41/100 | Train Loss: 0.4241
+2026-07-10 05:10:04,286 | INFO | Epoch 42/100 | Train Loss: 0.4303
+2026-07-10 05:11:43,162 | INFO | Epoch 43/100 | Train Loss: 0.4197
+2026-07-10 05:13:23,359 | INFO | Epoch 44/100 | Train Loss: 0.4284
+2026-07-10 05:15:04,872 | INFO | Epoch 45/100 | Train Loss: 0.4406
+2026-07-10 05:16:45,276 | INFO | Epoch 46/100 | Train Loss: 0.4586
+2026-07-10 05:18:25,475 | INFO | Epoch 47/100 | Train Loss: 0.4235
+2026-07-10 05:20:05,897 | INFO | Epoch 48/100 | Train Loss: 0.4126
+2026-07-10 05:21:46,316 | INFO | Epoch 49/100 | Train Loss: 0.4044
+2026-07-10 05:23:25,884 | INFO | Epoch 50/100 | Train Loss: 0.3961
+2026-07-10 05:25:05,520 | INFO | Epoch 51/100 | Train Loss: 0.3848
+2026-07-10 05:26:45,190 | INFO | Epoch 52/100 | Train Loss: 0.4139
+2026-07-10 05:28:25,708 | INFO | Epoch 53/100 | Train Loss: 0.4253
+2026-07-10 05:30:05,185 | INFO | Epoch 54/100 | Train Loss: 0.4018
+2026-07-10 05:31:43,772 | INFO | Epoch 55/100 | Train Loss: 0.4056
+2026-07-10 05:33:22,356 | INFO | Epoch 56/100 | Train Loss: 0.4166
+2026-07-10 05:35:01,169 | INFO | Epoch 57/100 | Train Loss: 0.4094
+2026-07-10 05:36:40,960 | INFO | Epoch 58/100 | Train Loss: 0.4150
+2026-07-10 05:38:19,539 | INFO | Epoch 59/100 | Train Loss: 0.3944
+2026-07-10 05:39:59,076 | INFO | Epoch 60/100 | Train Loss: 0.4191
+2026-07-10 05:41:39,984 | INFO | Epoch 61/100 | Train Loss: 0.3876
+2026-07-10 05:43:20,512 | INFO | Epoch 62/100 | Train Loss: 0.4023
+2026-07-10 05:45:01,114 | INFO | Epoch 63/100 | Train Loss: 0.3918
+2026-07-10 05:46:42,642 | INFO | Epoch 64/100 | Train Loss: 0.3978
+2026-07-10 05:48:23,374 | INFO | Epoch 65/100 | Train Loss: 0.4033
+2026-07-10 05:50:04,340 | INFO | Epoch 66/100 | Train Loss: 0.3883
+2026-07-10 05:51:44,274 | INFO | Epoch 67/100 | Train Loss: 0.4175
+2026-07-10 05:53:23,384 | INFO | Epoch 68/100 | Train Loss: 0.3764
+2026-07-10 05:55:01,783 | INFO | Epoch 69/100 | Train Loss: 0.3973
+2026-07-10 05:56:40,814 | INFO | Epoch 70/100 | Train Loss: 0.3926
+2026-07-10 05:58:23,462 | INFO | Epoch 71/100 | Train Loss: 0.4123
+2026-07-10 06:00:04,091 | INFO | Epoch 72/100 | Train Loss: 0.3704
+2026-07-10 06:01:43,630 | INFO | Epoch 73/100 | Train Loss: 0.3919
+2026-07-10 06:03:24,088 | INFO | Epoch 74/100 | Train Loss: 0.3860
+2026-07-10 06:05:04,325 | INFO | Epoch 75/100 | Train Loss: 0.3756
+2026-07-10 06:06:44,812 | INFO | Epoch 76/100 | Train Loss: 0.3750
+2026-07-10 06:08:24,574 | INFO | Epoch 77/100 | Train Loss: 0.3807
+2026-07-10 06:10:03,730 | INFO | Epoch 78/100 | Train Loss: 0.3910
+2026-07-10 06:11:43,323 | INFO | Epoch 79/100 | Train Loss: 0.3923
+2026-07-10 06:13:21,986 | INFO | Epoch 80/100 | Train Loss: 0.3612
+2026-07-10 06:15:01,923 | INFO | Epoch 81/100 | Train Loss: 0.3725
+2026-07-10 06:16:41,535 | INFO | Epoch 82/100 | Train Loss: 0.3753
+2026-07-10 06:18:21,066 | INFO | Epoch 83/100 | Train Loss: 0.3783
+2026-07-10 06:20:01,663 | INFO | Epoch 84/100 | Train Loss: 0.4002
+2026-07-10 06:21:41,626 | INFO | Epoch 85/100 | Train Loss: 0.3928
+2026-07-10 06:23:20,993 | INFO | Epoch 86/100 | Train Loss: 0.3922
+2026-07-10 06:25:00,860 | INFO | Epoch 87/100 | Train Loss: 0.3671
+2026-07-10 06:26:41,326 | INFO | Epoch 88/100 | Train Loss: 0.3901
+2026-07-10 06:28:23,230 | INFO | Epoch 89/100 | Train Loss: 0.3826
+2026-07-10 06:30:03,848 | INFO | Epoch 90/100 | Train Loss: 0.3876
+2026-07-10 06:31:44,005 | INFO | Epoch 91/100 | Train Loss: 0.3851
+2026-07-10 06:33:24,143 | INFO | Epoch 92/100 | Train Loss: 0.3773
+2026-07-10 06:35:03,687 | INFO | Epoch 93/100 | Train Loss: 0.3868
+2026-07-10 06:36:42,808 | INFO | Epoch 94/100 | Train Loss: 0.3697
+2026-07-10 06:38:22,185 | INFO | Epoch 95/100 | Train Loss: 0.3770
+2026-07-10 06:40:01,206 | INFO | Epoch 96/100 | Train Loss: 0.3829
+2026-07-10 06:41:40,231 | INFO | Epoch 97/100 | Train Loss: 0.3789
+2026-07-10 06:43:19,433 | INFO | Epoch 98/100 | Train Loss: 0.3923
+2026-07-10 06:44:59,038 | INFO | Epoch 99/100 | Train Loss: 0.3932
+2026-07-10 06:46:39,133 | INFO | Epoch 100/100 | Train Loss: 0.3744
+2026-07-10 06:46:39,266 | INFO | 
+✓ Final model saved to /mnt/primary/image-segmentation-training/results/final_segformer_b0_7class.pth
+2026-07-10 06:46:39,375 | INFO | ✓ Final loss curve saved to /mnt/primary/image-segmentation-training/results/final_curves.png
+2026-07-10 06:48:19,316 | INFO | Epoch 1/100 | Train Loss: 1.9169
+2026-07-10 06:49:59,040 | INFO | Epoch 2/100 | Train Loss: 1.6878
+2026-07-10 06:51:39,085 | INFO | Epoch 3/100 | Train Loss: 1.3661
+2026-07-10 06:53:19,510 | INFO | Epoch 4/100 | Train Loss: 1.1393
+2026-07-10 06:54:59,253 | INFO | Epoch 5/100 | Train Loss: 1.0010
+2026-07-10 06:56:39,201 | INFO | Epoch 6/100 | Train Loss: 0.9099
+2026-07-10 06:58:20,059 | INFO | Epoch 7/100 | Train Loss: 0.8193
+2026-07-10 06:59:58,747 | INFO | Epoch 8/100 | Train Loss: 0.7449
+2026-07-10 07:01:37,458 | INFO | Epoch 9/100 | Train Loss: 0.7101
+2026-07-10 07:03:15,850 | INFO | Epoch 10/100 | Train Loss: 0.7248
+2026-07-10 07:04:54,770 | INFO | Epoch 11/100 | Train Loss: 0.6485
+2026-07-10 07:06:33,716 | INFO | Epoch 12/100 | Train Loss: 0.6396
+2026-07-10 07:08:12,552 | INFO | Epoch 13/100 | Train Loss: 0.6158
+2026-07-10 07:09:51,932 | INFO | Epoch 14/100 | Train Loss: 0.6196
+2026-07-10 07:11:31,691 | INFO | Epoch 15/100 | Train Loss: 0.5798
+2026-07-10 07:13:12,381 | INFO | Epoch 16/100 | Train Loss: 0.5713
+2026-07-10 07:14:52,055 | INFO | Epoch 17/100 | Train Loss: 0.5536
+2026-07-10 07:16:32,083 | INFO | Epoch 18/100 | Train Loss: 0.5432
+2026-07-10 07:18:13,437 | INFO | Epoch 19/100 | Train Loss: 0.5316
+2026-07-10 07:19:53,580 | INFO | Epoch 20/100 | Train Loss: 0.5475
+2026-07-10 07:21:33,883 | INFO | Epoch 21/100 | Train Loss: 0.5445
+2026-07-10 07:23:13,003 | INFO | Epoch 22/100 | Train Loss: 0.5095
+2026-07-10 07:24:53,067 | INFO | Epoch 23/100 | Train Loss: 0.4822
+2026-07-10 07:26:33,843 | INFO | Epoch 24/100 | Train Loss: 0.5170
+2026-07-10 07:28:14,615 | INFO | Epoch 25/100 | Train Loss: 0.5191
+2026-07-10 07:29:54,101 | INFO | Epoch 26/100 | Train Loss: 0.4780
+2026-07-10 07:31:33,372 | INFO | Epoch 27/100 | Train Loss: 0.4806
+2026-07-10 07:33:12,229 | INFO | Epoch 28/100 | Train Loss: 0.4816
+2026-07-10 07:34:51,117 | INFO | Epoch 29/100 | Train Loss: 0.4757
+2026-07-10 07:36:29,847 | INFO | Epoch 30/100 | Train Loss: 0.5053
+2026-07-10 07:38:08,499 | INFO | Epoch 31/100 | Train Loss: 0.4540
+2026-07-10 07:39:47,629 | INFO | Epoch 32/100 | Train Loss: 0.4593
+2026-07-10 07:41:26,766 | INFO | Epoch 33/100 | Train Loss: 0.4616
+2026-07-10 07:43:05,899 | INFO | Epoch 34/100 | Train Loss: 0.4685
+2026-07-10 07:44:45,050 | INFO | Epoch 35/100 | Train Loss: 0.4671
+2026-07-10 07:46:24,267 | INFO | Epoch 36/100 | Train Loss: 0.4648
+2026-07-10 07:48:03,626 | INFO | Epoch 37/100 | Train Loss: 0.4526
+2026-07-10 07:49:42,339 | INFO | Epoch 38/100 | Train Loss: 0.4564
+2026-07-10 07:51:22,095 | INFO | Epoch 39/100 | Train Loss: 0.4200
+2026-07-10 07:53:03,146 | INFO | Epoch 40/100 | Train Loss: 0.4487
+2026-07-10 07:54:43,520 | INFO | Epoch 41/100 | Train Loss: 0.4276
+2026-07-10 07:56:23,947 | INFO | Epoch 42/100 | Train Loss: 0.4344
+2026-07-10 07:58:06,068 | INFO | Epoch 43/100 | Train Loss: 0.4193
+2026-07-10 07:59:46,076 | INFO | Epoch 44/100 | Train Loss: 0.4397
+2026-07-10 08:01:26,542 | INFO | Epoch 45/100 | Train Loss: 0.5047
+2026-07-10 08:03:07,654 | INFO | Epoch 46/100 | Train Loss: 0.4202
+2026-07-10 08:04:47,562 | INFO | Epoch 47/100 | Train Loss: 0.4303
+2026-07-10 08:06:26,937 | INFO | Epoch 48/100 | Train Loss: 0.4246
+2026-07-10 08:08:05,954 | INFO | Epoch 49/100 | Train Loss: 0.3901
+2026-07-10 08:09:44,612 | INFO | Epoch 50/100 | Train Loss: 0.4361
+2026-07-10 08:11:23,461 | INFO | Epoch 51/100 | Train Loss: 0.4118
+2026-07-10 08:13:02,598 | INFO | Epoch 52/100 | Train Loss: 0.4078
+2026-07-10 08:14:42,055 | INFO | Epoch 53/100 | Train Loss: 0.4015
+2026-07-10 08:16:22,490 | INFO | Epoch 54/100 | Train Loss: 0.4133
+2026-07-10 08:18:02,903 | INFO | Epoch 55/100 | Train Loss: 0.4255
+2026-07-10 08:19:43,516 | INFO | Epoch 56/100 | Train Loss: 0.4020
+2026-07-10 08:21:23,904 | INFO | Epoch 57/100 | Train Loss: 0.4044
+2026-07-10 08:23:04,850 | INFO | Epoch 58/100 | Train Loss: 0.4089
+2026-07-10 08:24:44,612 | INFO | Epoch 59/100 | Train Loss: 0.4007
+2026-07-10 08:26:25,387 | INFO | Epoch 60/100 | Train Loss: 0.4161
+2026-07-10 08:28:06,181 | INFO | Epoch 61/100 | Train Loss: 0.3993
+2026-07-10 08:29:45,154 | INFO | Epoch 62/100 | Train Loss: 0.4097
+2026-07-10 08:31:23,990 | INFO | Epoch 63/100 | Train Loss: 0.3952
+2026-07-10 08:33:03,076 | INFO | Epoch 64/100 | Train Loss: 0.4061
+2026-07-10 08:34:42,437 | INFO | Epoch 65/100 | Train Loss: 0.3972
+2026-07-10 08:36:22,050 | INFO | Epoch 66/100 | Train Loss: 0.4070
+2026-07-10 08:38:01,709 | INFO | Epoch 67/100 | Train Loss: 0.3660
+2026-07-10 08:39:41,525 | INFO | Epoch 68/100 | Train Loss: 0.3806
+2026-07-10 08:41:21,209 | INFO | Epoch 69/100 | Train Loss: 0.3847
+2026-07-10 08:43:01,370 | INFO | Epoch 70/100 | Train Loss: 0.3802
+2026-07-10 08:44:40,890 | INFO | Epoch 71/100 | Train Loss: 0.3993
+2026-07-10 08:46:20,436 | INFO | Epoch 72/100 | Train Loss: 0.3953
+2026-07-10 08:47:59,781 | INFO | Epoch 73/100 | Train Loss: 0.3882
+2026-07-10 08:49:39,228 | INFO | Epoch 74/100 | Train Loss: 0.4050
+2026-07-10 08:51:18,398 | INFO | Epoch 75/100 | Train Loss: 0.3806
+2026-07-10 08:52:56,492 | INFO | Epoch 76/100 | Train Loss: 0.3750
+2026-07-10 08:54:34,404 | INFO | Epoch 77/100 | Train Loss: 0.4046
+2026-07-10 08:56:12,228 | INFO | Epoch 78/100 | Train Loss: 0.3810
+2026-07-10 08:57:51,353 | INFO | Epoch 79/100 | Train Loss: 0.3739
+2026-07-10 08:59:29,102 | INFO | Epoch 80/100 | Train Loss: 0.4063
+2026-07-10 09:01:07,197 | INFO | Epoch 81/100 | Train Loss: 0.4024
+2026-07-10 09:02:46,229 | INFO | Epoch 82/100 | Train Loss: 0.4074
+2026-07-10 09:04:24,478 | INFO | Epoch 83/100 | Train Loss: 0.3890
+2026-07-10 09:06:02,704 | INFO | Epoch 84/100 | Train Loss: 0.3886
+2026-07-10 09:07:40,939 | INFO | Epoch 85/100 | Train Loss: 0.3701
+2026-07-10 09:09:18,871 | INFO | Epoch 86/100 | Train Loss: 0.3996
+2026-07-10 09:10:57,016 | INFO | Epoch 87/100 | Train Loss: 0.3823
+2026-07-10 09:12:35,081 | INFO | Epoch 88/100 | Train Loss: 0.3694
+2026-07-10 09:14:12,863 | INFO | Epoch 89/100 | Train Loss: 0.3798
+2026-07-10 09:15:50,581 | INFO | Epoch 90/100 | Train Loss: 0.3807
+2026-07-10 09:17:28,446 | INFO | Epoch 91/100 | Train Loss: 0.3682
+2026-07-10 09:19:06,345 | INFO | Epoch 92/100 | Train Loss: 0.3696
+2026-07-10 09:20:44,352 | INFO | Epoch 93/100 | Train Loss: 0.3801
+2026-07-10 09:22:21,763 | INFO | Epoch 94/100 | Train Loss: 0.3868
+2026-07-10 09:23:59,742 | INFO | Epoch 95/100 | Train Loss: 0.3850
+2026-07-10 09:25:37,521 | INFO | Epoch 96/100 | Train Loss: 0.3737
+2026-07-10 09:27:15,852 | INFO | Epoch 97/100 | Train Loss: 0.3787
+2026-07-10 09:28:53,752 | INFO | Epoch 98/100 | Train Loss: 0.3753
+2026-07-10 09:30:31,246 | INFO | Epoch 99/100 | Train Loss: 0.3942
+2026-07-10 09:32:09,098 | INFO | Epoch 100/100 | Train Loss: 0.3819
+2026-07-10 09:32:09,231 | INFO | 
+✓ Final model saved to /mnt/primary/image-segmentation-training/results/final_segformer_b0_7class.pth
