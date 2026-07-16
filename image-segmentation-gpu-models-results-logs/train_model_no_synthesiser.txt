@@ -1,0 +1,689 @@
+# from google.colab import drive
+# drive.mount('/content/drive')
+# print("Google Drive mounted successfully!")
+
+!pip install -q transformers datasets evaluate albumentations scikit-image opencv-python
+
+import os
+import zipfile
+import shutil
+import random
+import numpy as np
+from pathlib import Path
+from PIL import Image
+
+import torch
+from torch.utils.data import Dataset, DataLoader
+from torch.optim import AdamW
+from torch.amp import autocast, GradScaler
+from tqdm.auto import tqdm
+
+import albumentations as A
+import evaluate
+
+from transformers import (
+    SegformerImageProcessor,
+    SegformerForSemanticSegmentation,
+    get_cosine_schedule_with_warmup,
+)
+
+
+PERSIST_ROOT = Path(os.environ.get('PERSIST_ROOT', '/mnt/primary'))
+if not PERSIST_ROOT.exists():
+    raise RuntimeError(f'Persistent storage not found at {PERSIST_ROOT}. Check mounts (df -h /mnt/primary).')
+
+RUN_ROOT = Path(os.environ.get('RUN_ROOT', PERSIST_ROOT / 'image-segmentation-training'))
+if not str(RUN_ROOT).startswith(str(PERSIST_ROOT)):
+    print(f'WARNING: RUN_ROOT={RUN_ROOT} is not on persistent storage; forcing to {PERSIST_ROOT}/image-segementation-training')
+    RUN_ROOT = PERSIST_ROOT / 'image-segmentation-training'
+RUN_ROOT.mkdir(parents=True, exist_ok=True)
+
+DATA_PATH = Path(os.environ.get('DATA_PATH', RUN_ROOT / 'dataset'))
+RESULTS_ROOT = Path(os.environ.get('RESULTS_ROOT', RUN_ROOT / 'results'))
+RESULTS_ROOT.mkdir(parents=True, exist_ok=True)
+
+print('DATA_PATH:', DATA_PATH)
+print('RESULTS_ROOT:', RESULTS_ROOT)
+
+# -----------------------------
+# 1b) Validate dataset structure
+# -----------------------------
+train_dir = DATA_PATH / 'train'
+val_dir   = DATA_PATH / 'valid'
+test_dir  = DATA_PATH / 'test'
+
+for d in [train_dir, val_dir, test_dir]:
+    if not d.exists():
+        raise RuntimeError(f"Expected dataset folder not found: {d}")
+
+train_sats  = sorted(train_dir.glob("*_sat.jpg"))
+train_masks = sorted(train_dir.glob("*_mask.png"))
+val_sats    = sorted(val_dir.glob("*_sat.jpg"))
+test_sats   = sorted(test_dir.glob("*_sat.jpg"))
+
+print(f"Dataset structure:")
+print(f"  train/  — {len(train_sats)} sat images, {len(train_masks)} masks")
+print(f"  valid/  — {len(val_sats)} sat images (no masks, inference only)")
+print(f"  test/   — {len(test_sats)} sat images (no masks, inference only)")
+
+if len(train_sats) != len(train_masks):
+    print(f"WARNING: sat/mask count mismatch in train/ ({len(train_sats)} vs {len(train_masks)})")
+
+
+# -----------------------------
+# 2) Reproducibility
+# -----------------------------
+def seed_everything(seed=42):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+
+seed_everything(42)
+
+# -----------------------------
+# 3) Label mapping
+# -----------------------------
+id2label = {
+    0: 'urban_land',
+    1: 'agriculture_land',
+    2: 'rangeland',
+    3: 'forest_land',
+    4: 'water',
+    5: 'barren_land',
+    6: 'unknown'
+}
+label2id = {v: k for k, v in id2label.items()}
+
+COLOR_MAP = {
+    (0, 255, 255): 0,
+    (255, 255, 0): 1,
+    (255, 0, 255): 2,
+    (0, 255, 0): 3,
+    (0, 0, 255): 4,
+    (255, 255, 255): 5,
+    (0, 0, 0): 6
+}
+
+
+# -----------------------------
+# 4) Dataset
+# -----------------------------
+class SemanticSegmentationDataset(Dataset):
+    def __init__(self, root_dir, image_processor, train=True, image_size=512, file_list=None):
+        self.root_dir = root_dir
+        self.image_processor = image_processor
+        self.train = train
+        if file_list is not None:
+            self.images = sorted(file_list)
+        else:
+            self.images = sorted([f for f in os.listdir(root_dir) if f.endswith('_sat.jpg')])
+        assert len(self.images) > 0, f"No *_sat.jpg files found in {root_dir}"
+
+        if train:
+            self.transform = A.Compose([
+                A.Resize(image_size, image_size),
+                A.HorizontalFlip(p=0.5),
+                A.VerticalFlip(p=0.2),
+                A.RandomRotate90(p=0.5),
+                A.RandomBrightnessContrast(p=0.3),
+                A.HueSaturationValue(hue_shift_limit=5, sat_shift_limit=10, val_shift_limit=10, p=0.2),
+                A.ShiftScaleRotate(shift_limit=0.02, scale_limit=0.05, rotate_limit=10, border_mode=0, p=0.2),
+                A.GaussNoise(var_limit=(5.0, 20.0), p=0.2),
+            ])
+        else:
+            self.transform = A.Compose([
+                A.Resize(image_size, image_size),
+            ])
+
+    def rgb_to_label(self, mask_rgb: np.ndarray) -> np.ndarray:
+        label_mask = np.full(mask_rgb.shape[:2], fill_value=6, dtype=np.uint8)  # default unknown
+        for color, class_idx in COLOR_MAP.items():
+            matches = np.all(mask_rgb == np.array(color, dtype=np.uint8), axis=-1)
+            label_mask[matches] = class_idx
+        return label_mask
+
+    def __len__(self):
+        return len(self.images)
+
+    def __getitem__(self, idx):
+        img_name = self.images[idx]
+        mask_name = img_name.replace('_sat.jpg', '_mask.png')
+
+        img_path = os.path.join(self.root_dir, img_name)
+        mask_path = os.path.join(self.root_dir, mask_name)
+
+        image = np.array(Image.open(img_path).convert('RGB'))
+        mask_rgb = np.array(Image.open(mask_path).convert('RGB'))
+        mask = self.rgb_to_label(mask_rgb)
+
+        transformed = self.transform(image=image, mask=mask)
+        image = transformed['image']
+        mask = transformed['mask']
+
+        encoded = self.image_processor(
+            images=image,
+            segmentation_maps=mask,
+            return_tensors="pt"
+        )
+
+        return {
+            "pixel_values": encoded["pixel_values"].squeeze(0),
+            "labels": encoded["labels"].squeeze(0).long(),
+        }
+
+
+# -----------------------------
+# 5) Processor / image list
+# -----------------------------
+root_dir = '/content/archive'  # update this to your cluster dataset path
+train_dir = os.path.join(root_dir, 'train')
+
+image_processor = SegformerImageProcessor(do_resize=False)
+
+all_images = sorted([f for f in os.listdir(train_dir) if f.endswith('_sat.jpg')])
+print(f"Total labeled samples: {len(all_images)}")
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+pin_memory = device.type == "cuda"
+BATCH_SIZE = 16
+NUM_WORKERS = min(4, os.cpu_count() or 2)
+
+
+# -----------------------------
+# 5) Processor / image list
+# -----------------------------
+image_processor = SegformerImageProcessor(do_resize=False)
+
+all_images = sorted([f.name for f in train_dir.glob("*_sat.jpg")])
+print(f"Total labeled samples: {len(all_images)}")
+
+device     = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+pin_memory = device.type == "cuda"
+BATCH_SIZE  = 16
+NUM_WORKERS = min(8, os.cpu_count() or 4)
+
+print(f"Device: {device} | Batch size: {BATCH_SIZE} | Workers: {NUM_WORKERS}")
+
+
+# -----------------------------
+# 6) Model — download once, cache locally
+# -----------------------------
+MODEL_CACHE = RESULTS_ROOT / "segformer_b0_pretrained"
+if not MODEL_CACHE.exists():
+    print("Downloading pretrained weights...")
+    _m = SegformerForSemanticSegmentation.from_pretrained(
+        "nvidia/segformer-b0-finetuned-ade-512-512",
+        num_labels=7,
+        id2label=id2label,
+        label2id=label2id,
+        ignore_mismatched_sizes=True,
+    )
+    _m.save_pretrained(MODEL_CACHE)
+    del _m
+    print(f"✓ Cached to {MODEL_CACHE}")
+else:
+    print(f"✓ Using cached weights from {MODEL_CACHE}")
+
+total_params = sum(
+    p.numel() for p in SegformerForSemanticSegmentation.from_pretrained(
+        str(MODEL_CACHE), num_labels=7, id2label=id2label, label2id=label2id,
+        ignore_mismatched_sizes=True, local_files_only=True,
+    ).parameters()
+)
+print(f"Total parameters: {total_params:,}")
+
+
+# -----------------------------
+# 8) Train / eval loops
+# -----------------------------
+def train_epoch(model, dataloader, optimizer, scheduler, scaler, device, grad_accum_steps=1):
+    model.train()
+    running_loss = 0.0
+    optimizer.zero_grad(set_to_none=True)
+
+    progress = tqdm(enumerate(dataloader), total=len(dataloader), desc="Training")
+    for step, batch in progress:
+        pixel_values = batch["pixel_values"].to(device, non_blocking=True)
+        labels = batch["labels"].to(device, non_blocking=True)
+
+        with autocast(device_type="cuda", enabled=(device.type == "cuda")):
+            outputs = model(pixel_values=pixel_values, labels=labels)
+            loss = outputs.loss / grad_accum_steps
+
+        scaler.scale(loss).backward()
+
+        if (step + 1) % grad_accum_steps == 0 or (step + 1) == len(dataloader):
+            scaler.step(optimizer)
+            scaler.update()
+            optimizer.zero_grad(set_to_none=True)
+            scheduler.step()
+
+        running_loss += loss.item() * grad_accum_steps
+        progress.set_postfix(loss=f"{running_loss / (step + 1):.4f}")
+
+    return running_loss / len(dataloader)
+
+@torch.no_grad()
+def eval_epoch(model, dataloader, device):
+    model.eval()
+    metric = evaluate.load(metric_name)
+    running_loss = 0.0
+
+    progress = tqdm(dataloader, total=len(dataloader), desc="Evaluating")
+    for batch in progress:
+        pixel_values = batch["pixel_values"].to(device, non_blocking=True)
+        labels = batch["labels"].to(device, non_blocking=True)
+
+        with autocast(device_type="cuda", enabled=(device.type == "cuda")):
+            outputs = model(pixel_values=pixel_values, labels=labels)
+            loss = outputs.loss
+
+        logits = outputs.logits
+        upsampled_logits = torch.nn.functional.interpolate(
+            logits,
+            size=labels.shape[-2:],
+            mode="bilinear",
+            align_corners=False,
+        )
+        preds = upsampled_logits.argmax(dim=1)
+
+        metric.add_batch(
+            predictions=preds.detach().cpu().numpy(),
+            references=labels.detach().cpu().numpy(),
+        )
+        running_loss += loss.item()
+        progress.set_postfix(loss=f"{running_loss / max(1, progress.n):.4f}")
+
+    metrics = metric.compute(num_labels=7, ignore_index=255, reduce_labels=False)
+    return running_loss / len(dataloader), metrics
+
+def make_optimizer_and_scheduler(model, num_training_steps):
+    optimizer = AdamW([
+        {"params": model.segformer.parameters(),   "lr": 1e-5},
+        {"params": model.decode_head.parameters(), "lr": 5e-4},
+    ], weight_decay=0.01)
+    scheduler = get_cosine_schedule_with_warmup(
+        optimizer,
+        num_warmup_steps=max(1, int(0.1 * num_training_steps)),
+        num_training_steps=num_training_steps,
+    )
+    return optimizer, scheduler
+
+def fresh_model():
+    m = SegformerForSemanticSegmentation.from_pretrained(
+        "nvidia/segformer-b0-finetuned-ade-512-512",
+        num_labels=7,
+        id2label=id2label,
+        label2id=label2id,
+        ignore_mismatched_sizes=True,
+    )
+    return m.to(device)
+
+def train_model(model, train_loader, valid_loader, optimizer, scheduler, scaler, device,
+                num_epochs=100, patience=7, save_path=None):
+    best_miou = -1.0
+    patience_counter = 0
+    best_metrics = None
+
+    for epoch in range(num_epochs):
+        print(f"\nEpoch {epoch + 1}/{num_epochs}")
+        train_loss = train_epoch(model, train_loader, optimizer, scheduler, scaler, device)
+        val_loss, val_metrics = eval_epoch(model, valid_loader, device)
+
+        mean_iou      = float(val_metrics["mean_iou"])
+        mean_accuracy = float(val_metrics["mean_accuracy"])
+
+        print(f"Train Loss: {train_loss:.4f} | Val Loss: {val_loss:.4f} | Val mIoU: {mean_iou:.4f} | Val mAcc: {mean_accuracy:.4f}")
+
+        if mean_iou > best_miou:
+            best_miou = mean_iou
+            best_metrics = val_metrics
+            patience_counter = 0
+            if save_path:
+                torch.save({"model_state_dict": model.state_dict(), "id2label": id2label, "label2id": label2id}, save_path)
+                print(f"✓ Saved best model to {save_path}")
+        else:
+            patience_counter += 1
+            print(f"No improvement. Patience {patience_counter}/{patience}")
+            if patience_counter >= patience:
+                print("Early stopping.")
+                break
+
+    return model, best_metrics
+
+
+# -----------------------------
+# 8) Train / eval loops
+# -----------------------------
+import matplotlib
+matplotlib.use('Agg')  # non-interactive backend safe for cluster use
+import matplotlib.pyplot as plt
+
+def train_epoch(model, dataloader, optimizer, scheduler, scaler, device, grad_accum_steps=1):
+    model.train()
+    running_loss = 0.0
+    optimizer.zero_grad(set_to_none=True)
+
+    progress = tqdm(enumerate(dataloader), total=len(dataloader), desc="Training")
+    for step, batch in progress:
+        pixel_values = batch["pixel_values"].to(device, non_blocking=True)
+        labels = batch["labels"].to(device, non_blocking=True)
+
+        with autocast(device_type="cuda", enabled=(device.type == "cuda")):
+            outputs = model(pixel_values=pixel_values, labels=labels)
+            loss = outputs.loss / grad_accum_steps
+
+        scaler.scale(loss).backward()
+
+        if (step + 1) % grad_accum_steps == 0 or (step + 1) == len(dataloader):
+            scaler.step(optimizer)
+            scaler.update()
+            optimizer.zero_grad(set_to_none=True)
+            scheduler.step()
+
+        running_loss += loss.item() * grad_accum_steps
+        progress.set_postfix(loss=f"{running_loss / (step + 1):.4f}")
+
+    return running_loss / len(dataloader)
+
+@torch.no_grad()
+def eval_epoch(model, dataloader, device):
+    model.eval()
+    metric = evaluate.load(metric_name)
+    running_loss = 0.0
+
+    progress = tqdm(dataloader, total=len(dataloader), desc="Evaluating")
+    for batch in progress:
+        pixel_values = batch["pixel_values"].to(device, non_blocking=True)
+        labels = batch["labels"].to(device, non_blocking=True)
+
+        with autocast(device_type="cuda", enabled=(device.type == "cuda")):
+            outputs = model(pixel_values=pixel_values, labels=labels)
+            loss = outputs.loss
+
+        logits = outputs.logits
+        upsampled_logits = torch.nn.functional.interpolate(
+            logits,
+            size=labels.shape[-2:],
+            mode="bilinear",
+            align_corners=False,
+        )
+        preds = upsampled_logits.argmax(dim=1)
+
+        metric.add_batch(
+            predictions=preds.detach().cpu().numpy(),
+            references=labels.detach().cpu().numpy(),
+        )
+        running_loss += loss.item()
+        progress.set_postfix(loss=f"{running_loss / max(1, progress.n):.4f}")
+
+    metrics = metric.compute(num_labels=7, ignore_index=255, reduce_labels=False)
+    return running_loss / len(dataloader), metrics
+
+def save_loss_curves(history, save_path):
+    epochs = range(1, len(history["train_loss"]) + 1)
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 4))
+
+    ax1.plot(epochs, history["train_loss"], label="Train Loss")
+    ax1.plot(epochs, history["val_loss"],   label="Val Loss")
+    ax1.set_xlabel("Epoch")
+    ax1.set_ylabel("Loss")
+    ax1.set_title("Loss Curves")
+    ax1.legend()
+
+    ax2.plot(epochs, history["val_miou"], label="Val mIoU", color="green")
+    ax2.set_xlabel("Epoch")
+    ax2.set_ylabel("mIoU")
+    ax2.set_title("Validation mIoU")
+    ax2.legend()
+
+    plt.tight_layout()
+    plt.savefig(save_path, dpi=150)
+    plt.close()
+
+def make_optimizer_and_scheduler(model, num_training_steps):
+    optimizer = AdamW([
+        {"params": model.segformer.parameters(),   "lr": 1e-5},
+        {"params": model.decode_head.parameters(), "lr": 5e-4},
+    ], weight_decay=0.01)
+    scheduler = get_cosine_schedule_with_warmup(
+        optimizer,
+        num_warmup_steps=max(1, int(0.1 * num_training_steps)),
+        num_training_steps=num_training_steps,
+    )
+    return optimizer, scheduler
+
+def fresh_model():
+    m = SegformerForSemanticSegmentation.from_pretrained(
+        str(MODEL_CACHE),
+        num_labels=7,
+        id2label=id2label,
+        label2id=label2id,
+        ignore_mismatched_sizes=True,
+        local_files_only=True,
+    )
+    return m.to(device)
+
+def train_model(model, train_loader, valid_loader, optimizer, scheduler, scaler, device,
+                num_epochs=100, patience=7, save_path=None, curve_prefix=None):
+    best_miou = -1.0
+    best_epoch = 0
+    patience_counter = 0
+    best_metrics = None
+    history = {"train_loss": [], "val_loss": [], "val_miou": [], "val_macc": []}
+
+    for epoch in range(num_epochs):
+        print(f"\nEpoch {epoch + 1}/{num_epochs}")
+        train_loss = train_epoch(model, train_loader, optimizer, scheduler, scaler, device)
+        val_loss, val_metrics = eval_epoch(model, valid_loader, device)
+
+        mean_iou      = float(val_metrics["mean_iou"])
+        mean_accuracy = float(val_metrics["mean_accuracy"])
+
+        history["train_loss"].append(train_loss)
+        history["val_loss"].append(val_loss)
+        history["val_miou"].append(mean_iou)
+        history["val_macc"].append(mean_accuracy)
+
+        print(f"Train Loss: {train_loss:.4f} | Val Loss: {val_loss:.4f} | Val mIoU: {mean_iou:.4f} | Val mAcc: {mean_accuracy:.4f}")
+
+        if mean_iou > best_miou:
+            best_miou = mean_iou
+            best_epoch = epoch + 1  # 1-indexed
+            best_metrics = val_metrics
+            patience_counter = 0
+            if save_path:
+                torch.save({"model_state_dict": model.state_dict(), "id2label": id2label, "label2id": label2id}, save_path)
+                print(f"✓ Saved best model to {save_path}")
+        else:
+            patience_counter += 1
+            print(f"No improvement. Patience {patience_counter}/{patience}")
+            if patience_counter >= patience:
+                print("Early stopping.")
+                break
+
+    if curve_prefix:
+        csv_path  = Path(str(curve_prefix) + "_history.csv")
+        plot_path = Path(str(curve_prefix) + "_curves.png")
+        pd.DataFrame(history).to_csv(csv_path, index_label="epoch")
+        save_loss_curves(history, plot_path)
+        print(f"✓ Loss curves saved to {plot_path}")
+        print(f"✓ History CSV saved to {csv_path}")
+
+    print(f"\nBest epoch: {best_epoch} | Best mIoU: {best_miou:.4f}")
+    return model, best_metrics, best_epoch
+
+
+# -----------------------------
+# 9) K-Fold Cross Validation
+# -----------------------------
+import pandas as pd
+from sklearn.model_selection import KFold
+
+K = 5
+kf = KFold(n_splits=K, shuffle=True, random_state=42)
+fold_results = []
+
+for fold, (train_idx, val_idx) in enumerate(kf.split(all_images)):
+    print(f"\n{'='*55}")
+    print(f"  Fold {fold + 1} / {K}  —  train: {len(train_idx)}  val: {len(val_idx)}")
+    print(f"{'='*55}")
+
+    fold_train_files = [all_images[i] for i in train_idx]
+    fold_val_files   = [all_images[i] for i in val_idx]
+
+    fold_train_ds = SemanticSegmentationDataset(str(train_dir), image_processor, train=True,  image_size=512, file_list=fold_train_files)
+    fold_val_ds   = SemanticSegmentationDataset(str(train_dir), image_processor, train=False, image_size=512, file_list=fold_val_files)
+
+    fold_train_dl = DataLoader(fold_train_ds, batch_size=BATCH_SIZE, shuffle=True,  num_workers=NUM_WORKERS, pin_memory=pin_memory, persistent_workers=True)
+    fold_val_dl   = DataLoader(fold_val_ds,   batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS, pin_memory=pin_memory, persistent_workers=True)
+
+    fold_model    = fresh_model()
+    fold_scaler   = GradScaler("cuda", enabled=(device.type == "cuda"))
+    fold_optimizer, fold_scheduler = make_optimizer_and_scheduler(
+        fold_model, num_training_steps=num_epochs * len(fold_train_dl)
+    )
+
+    fold_prefix = RESULTS_ROOT / f"fold_{fold + 1}"
+    _, best_metrics, best_epoch = train_model(
+        fold_model, fold_train_dl, fold_val_dl,
+        fold_optimizer, fold_scheduler, fold_scaler,
+        device, num_epochs=num_epochs, patience=7,
+        save_path=str(fold_prefix) + "_best.pth",
+        curve_prefix=fold_prefix,
+    )
+
+    per_class_iou = {id2label[i]: round(float(v), 4) for i, v in enumerate(best_metrics["per_category_iou"])}
+    fold_results.append({
+        "fold":          fold + 1,
+        "best_epoch":    best_epoch,
+        "mean_iou":      round(float(best_metrics["mean_iou"]), 4),
+        "mean_accuracy": round(float(best_metrics["mean_accuracy"]), 4),
+        **per_class_iou,
+    })
+
+    del fold_model, fold_optimizer, fold_scheduler, fold_scaler
+    torch.cuda.empty_cache()
+
+# ── Summary ──────────────────────────────────────────────
+results_df = pd.DataFrame(fold_results).set_index("fold")
+mean_row   = results_df.mean().rename("mean")
+std_row    = results_df.std().rename("std")
+summary_df = pd.concat([results_df, mean_row.to_frame().T, std_row.to_frame().T])
+
+print(f"\n{'='*55}")
+print("K-Fold Cross Validation Summary")
+print(f"{'='*55}")
+display(summary_df)
+print(f"\nmIoU:       {results_df['mean_iou'].mean():.4f} ± {results_df['mean_iou'].std():.4f}")
+print(f"mAcc:       {results_df['mean_accuracy'].mean():.4f} ± {results_df['mean_accuracy'].std():.4f}")
+
+recommended_epochs = max(1, round(results_df["best_epoch"].mean()))
+print(f"Best epoch: {results_df['best_epoch'].tolist()} → recommended for final run: {recommended_epochs}")
+
+summary_df.to_csv(RESULTS_ROOT / "kfold_summary.csv")
+print(f"\n✓ Summary saved to {RESULTS_ROOT / 'kfold_summary.csv'}")
+
+
+# -----------------------------
+# 10) Final training on all 803 samples
+# -----------------------------
+# Use the average best epoch from K-fold as the fixed epoch count —
+# this is the closest proxy to "best epoch" when there is no validation set.
+print(f"Training final model for {recommended_epochs} epochs (mean best epoch across folds)")
+
+final_train_ds = SemanticSegmentationDataset(str(train_dir), image_processor, train=True, image_size=512)
+final_train_dl = DataLoader(final_train_ds, batch_size=BATCH_SIZE, shuffle=True, num_workers=NUM_WORKERS, pin_memory=pin_memory, persistent_workers=True)
+
+final_model  = fresh_model()
+final_scaler = GradScaler("cuda", enabled=(device.type == "cuda"))
+final_optimizer, final_scheduler = make_optimizer_and_scheduler(
+    final_model, num_training_steps=recommended_epochs * len(final_train_dl)
+)
+
+final_history = {"train_loss": []}
+for epoch in range(recommended_epochs):
+    train_loss = train_epoch(final_model, final_train_dl, final_optimizer, final_scheduler, final_scaler, device)
+    final_history["train_loss"].append(train_loss)
+    print(f"Epoch {epoch + 1}/{recommended_epochs} | Train Loss: {train_loss:.4f}")
+
+# Save model
+final_save = RESULTS_ROOT / "final_segformer_b0_7class.pth"
+torch.save({"model_state_dict": final_model.state_dict(), "id2label": id2label, "label2id": label2id}, str(final_save))
+print(f"\n✓ Final model saved to {final_save}")
+
+# Save train loss curve and CSV
+pd.DataFrame(final_history).to_csv(RESULTS_ROOT / "final_history.csv", index_label="epoch")
+fig, ax = plt.subplots(figsize=(8, 4))
+ax.plot(range(1, recommended_epochs + 1), final_history["train_loss"], label="Train Loss")
+ax.set_xlabel("Epoch")
+ax.set_ylabel("Loss")
+ax.set_title(f"Final Training Loss ({recommended_epochs} epochs)")
+ax.legend()
+plt.tight_layout()
+plt.savefig(RESULTS_ROOT / "final_curves.png", dpi=150)
+plt.close()
+print(f"✓ Final loss curve saved to {RESULTS_ROOT / 'final_curves.png'}")
+
+
+# -----------------------------
+# 10) Final training on all 803 samples
+# -----------------------------
+final_train_ds = SemanticSegmentationDataset(str(train_dir), image_processor, train=True, image_size=512)
+final_train_dl = DataLoader(final_train_ds, batch_size=BATCH_SIZE, shuffle=True, num_workers=NUM_WORKERS, pin_memory=pin_memory, persistent_workers=True)
+
+final_model  = fresh_model()
+final_scaler = GradScaler("cuda", enabled=(device.type == "cuda"))
+final_optimizer, final_scheduler = make_optimizer_and_scheduler(
+    final_model, num_training_steps=num_epochs * len(final_train_dl)
+)
+
+# No validation set — track train loss only
+final_history = {"train_loss": []}
+for epoch in range(num_epochs):
+    train_loss = train_epoch(final_model, final_train_dl, final_optimizer, final_scheduler, final_scaler, device)
+    final_history["train_loss"].append(train_loss)
+    print(f"Epoch {epoch + 1}/{num_epochs} | Train Loss: {train_loss:.4f}")
+
+# Save model
+final_save = RESULTS_ROOT / "final_segformer_b0_7class.pth"
+torch.save({"model_state_dict": final_model.state_dict(), "id2label": id2label, "label2id": label2id}, str(final_save))
+print(f"\n✓ Final model saved to {final_save}")
+
+# Save train loss curve and CSV
+pd.DataFrame(final_history).to_csv(RESULTS_ROOT / "final_history.csv", index_label="epoch")
+epochs = range(1, len(final_history["train_loss"]) + 1)
+fig, ax = plt.subplots(figsize=(8, 4))
+ax.plot(epochs, final_history["train_loss"], label="Train Loss")
+ax.set_xlabel("Epoch")
+ax.set_ylabel("Loss")
+ax.set_title("Final Training Loss")
+ax.legend()
+plt.tight_layout()
+plt.savefig(RESULTS_ROOT / "final_curves.png", dpi=150)
+plt.close()
+print(f"✓ Final loss curve saved to {RESULTS_ROOT / 'final_curves.png'}")
+
+
+# -----------------------------
+# 10) Final training on all 803 samples
+# -----------------------------
+final_train_ds = SemanticSegmentationDataset(str(train_dir), image_processor, train=True, image_size=512)
+final_train_dl = DataLoader(final_train_ds, batch_size=BATCH_SIZE, shuffle=True, num_workers=NUM_WORKERS, pin_memory=pin_memory, persistent_workers=True)
+
+final_model  = fresh_model()
+final_scaler = GradScaler("cuda", enabled=(device.type == "cuda"))
+final_optimizer, final_scheduler = make_optimizer_and_scheduler(
+    final_model, num_training_steps=num_epochs * len(final_train_dl)
+)
+
+# No validation set — train on everything. No early stopping, run full num_epochs.
+for epoch in range(num_epochs):
+    train_loss = train_epoch(final_model, final_train_dl, final_optimizer, final_scheduler, final_scaler, device)
+    print(f"Epoch {epoch + 1}/{num_epochs} | Train Loss: {train_loss:.4f}")
+
+final_save = RESULTS_ROOT / "final_segformer_b0_7class.pth"
+torch.save({"model_state_dict": final_model.state_dict(), "id2label": id2label, "label2id": label2id}, str(final_save))
+print(f"\n✓ Final model saved to {final_save}")
+
